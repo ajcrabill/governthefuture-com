@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission Drift in the Age of AI: What Nonprofit Boards Need to Clarify Now — Govern the Future</title>
+  <meta name="description" content="When AI can do what your staff does faster and cheaper, what does your board actually govern? The answer starts with a sharper definition of mission outcomes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:       #0066FF;
+      --dark:       #0A0A0F;
+      --white:      #FFFFFF;
+      --dark-blue:  #003399;
+      --light-blue: #E8F0FF;
+      --gray:       #6B7280;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--dark);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--blue);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+      border-bottom-color: var(--blue);
+    }
+
+    .post-header {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .post-header h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    .post-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      color: var(--gray);
+      font-size: 0.88rem;
+      font-weight: 400;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .post-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+    .post-body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .post-body p {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 1.75rem;
+    }
+
+    .post-body p strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .post-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 2.5rem 0 1rem;
+      color: var(--white);
+    }
+
+    .post-body ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .post-body ol li {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 0.75rem;
+    }
+
+    .post-body .callout {
+      border-left: 3px solid var(--blue);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      background: rgba(0,102,255,0.07);
+    }
+
+    .post-body .callout p {
+      margin-bottom: 0;
+      color: var(--light-blue);
+      font-size: 1.05rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .back-link:hover { border-bottom-color: var(--blue); }
+
+    .subscribe-strip {
+      background: var(--blue);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+
+    .subscribe-strip h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .subscribe-form {
+      display: flex;
+      gap: 0;
+      max-width: 460px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .subscribe-form input[type="email"] {
+      flex: 1;
+      min-width: 220px;
+      padding: 0.85rem 1.2rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      border: 2px solid var(--white);
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      outline: none;
+    }
+
+    .subscribe-form input[type="email"]::placeholder { color: rgba(255,255,255,0.65); }
+
+    .subscribe-form button {
+      padding: 0.85rem 1.6rem;
+      background: var(--dark-blue);
+      color: var(--white);
+      border: 2px solid var(--dark-blue);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .subscribe-form button:hover {
+      background: var(--dark);
+      border-color: var(--dark);
+    }
+
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--gray);
+      font-size: 0.88rem;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 1.2rem; }
+      .nav-links { gap: 1.2rem; }
+      .nav-links a { font-size: 0.85rem; }
+      .post-header, .post-body { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .post-header { padding-top: 3rem; }
+      .subscribe-strip { padding: 2.5rem 1.2rem; }
+      .subscribe-form { gap: 0.5rem; }
+      .subscribe-form input[type="email"], .subscribe-form button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">Govern the Future</a>
+    <ul class="nav-links">
+      <li><a href="/governance.html">Governance</a></li>
+      <li><a href="/technology.html">Technology</a></li>
+      <li><a href="/analysis.html">Analysis</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a class="nav-subscribe" href="/#subscribe">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <!-- POST HEADER -->
+  <header class="post-header">
+    <a class="back-link" href="/">← All Posts</a>
+    <span class="tag">Nonprofit Boards</span>
+    <h1>Mission Drift in the Age of AI: What Nonprofit Boards Need to Clarify Now</h1>
+    <div class="post-meta">
+      <span>June 2, 2026</span>
+      <span>·</span>
+      <span>5 min read</span>
+    </div>
+  </header>
+
+  <!-- POST BODY -->
+  <article class="post-body">
+    <p>When AI can do what your staff does faster and cheaper, what does your board actually govern? The answer starts with a sharper definition of mission outcomes.</p>
+
+    <p>The efficiency gains are real and, in many cases, substantial. Nonprofits across housing, education, healthcare access, and social services are finding that AI can draft grant proposals, generate donor outreach, triage client intake, and synthesize program evaluation data at a fraction of the labor cost. Some organizations have reduced administrative overhead by 30 to 40 percent on specific workflows.</p>
+
+    <p>But efficiency gains expose a foundational question that most nonprofit boards have never been forced to answer precisely: what, exactly, is this organization trying to produce? Not in the rhetorical sense of a mission statement — but in the specific, measurable sense that would let you evaluate whether any given activity, AI-powered or otherwise, is advancing or undermining that mission.</p>
+
+    <h2>The Proxy Problem</h2>
+
+    <p>Most nonprofit boards monitor what is easy to count. Clients served. Meals delivered. Grants received. Volunteers engaged. These are real numbers and they are not meaningless — but they are proxies for mission, not mission itself. The mission of a food security organization is not to deliver meals; it is to reduce food insecurity. The mission of a youth literacy program is not to serve students; it is to improve reading outcomes.</p>
+
+    <p>AI makes this distinction urgent in a way it never was before. When a human program officer serves 40 clients per month, the gap between "clients served" and "clients whose situations actually improved" is somewhat constrained by the human relationship involved. The program officer notices when something is wrong. She adjusts. She escalates.</p>
+
+    <p>When an AI system serves 400 clients per month, it can optimize relentlessly for whatever metric it is trained on — and drift systematically from actual mission without any individual noticing. An AI donor outreach tool optimized for donation conversion rates will find the messages that convert best. Whether those messages accurately represent the organization's work, build genuine donor relationships, or serve the long-term fundraising mission is a different question — one the algorithm does not answer.</p>
+
+    <p>A nonprofit board that has never defined its mission outcome precisely enough to evaluate human performance cannot evaluate AI performance either. The problem AI creates is not new; it is an amplification of a governance failure that already existed.</p>
+
+    <div class="callout">
+      <p>AI can optimize for whatever you measure. If what you measure is a proxy for your mission rather than your mission itself, AI will optimize you away from your mission faster than any prior technology could.</p>
+    </div>
+
+    <h2>Three Questions Before Any Significant AI Deployment</h2>
+
+    <p>Nonprofit boards do not need to become AI experts to govern well in this environment. They need to do the governance work they should have been doing all along — and apply it explicitly to AI adoption decisions.</p>
+
+    <p>Before authorizing any AI deployment that materially affects program delivery, donor relationships, or client services, every nonprofit board should be able to answer:</p>
+
+    <ol>
+      <li><strong>What specific outcome does this organization exist to produce, and how do we currently measure progress toward it?</strong> If the board cannot answer this question in concrete terms before the AI conversation, it cannot evaluate whether AI adoption advances or undermines the mission. The absence of a clear outcome definition is the governance failure — AI just makes it visible.</li>
+      <li><strong>What measurable proxy will this AI system optimize for, and how confident are we that optimizing for that proxy advances our actual mission?</strong> Every AI system optimizes for something. Boards need to know what that is and interrogate the relationship between the optimization target and the mission outcome. A grant-writing AI optimized for word count and keyword density is optimizing for a proxy; a board that does not interrogate that is delegating mission judgment to an algorithm.</li>
+      <li><strong>Who is accountable for monitoring whether this system is advancing mission outcomes — not just operational metrics — and how often does that accountability surface to the board?</strong> Monitoring AI for uptime and cost savings is IT governance. Monitoring AI for mission alignment is board governance. Both matter; only one is the board's job to ensure exists.</li>
+    </ol>
+
+    <h2>What Mission-Aligned AI Adoption Governance Actually Looks Like</h2>
+
+    <p>The nonprofit boards doing this well have made one structural decision that makes all the others easier: they have committed, as a governance body, to defining mission success in measurable terms before evaluating any major operational change — AI or otherwise.</p>
+
+    <p>That commitment produces concrete governance infrastructure. A documented outcome definition that goes beyond the mission statement. A small set of indicators the board monitors that track actual mission progress, not just program activity. A CEO evaluation framework tied to those indicators. And, when AI comes to the table, a clear basis for evaluating whether a proposed deployment is likely to advance or undermine them.</p>
+
+    <p>This is not an AI governance framework. It is a governance framework — the kind that boards should have built years ago. AI has made the cost of not having it considerably higher, and the urgency of building it considerably more acute. The boards that act on that urgency now will be positioned to govern their organizations through whatever comes next. The ones that treat AI adoption as a staff efficiency decision and leave mission alignment to chance are accumulating governance debt they will eventually have to pay.</p>
+  </article>
+
+  <!-- SUBSCRIBE STRIP -->
+  <section class="subscribe-strip">
+    <h2>Don't miss a post.</h2>
+    <form class="subscribe-form" id="post-subscribe-form" action="https://formspree.io/f/xayzdydv" method="POST">
+      <input type="hidden" name="form" value="governthefuture-subscribe">
+      <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="post-subscribe-success" style="display:none;color:#fff;font-weight:600;margin-top:1rem;">&#x2713; You're in. New insights every Monday.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Govern the Future | Weekly governance perspectives</p>
+    <p>&copy; 2026 Govern the Future</p>
+  </footer>
+
+  <script>
+    document.getElementById('post-subscribe-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      const resp = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+      if (resp.ok) { form.style.display = 'none'; document.getElementById('post-subscribe-success').style.display = 'block'; }
+      else { btn.textContent = 'Try again'; btn.disabled = false; }
+    });
+  </script>
+</body>
+</html>
