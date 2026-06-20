@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Trustees Are Approving AI Policies They Don't Understand. Here's What That Costs. — Govern the Future</title>
+  <meta name="description" content="Most university trustees who voted on their institution's AI policy in the last 18 months couldn't explain what it actually governs. That's a problem that will compound." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:       #0066FF;
+      --dark:       #0A0A0F;
+      --white:      #FFFFFF;
+      --dark-blue:  #003399;
+      --light-blue: #E8F0FF;
+      --gray:       #6B7280;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--dark);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--blue);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+      border-bottom-color: var(--blue);
+    }
+
+    .post-header {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .post-header h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    .post-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      color: var(--gray);
+      font-size: 0.88rem;
+      font-weight: 400;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .post-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+    .post-body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .post-body p {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 1.75rem;
+    }
+
+    .post-body p strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .post-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 2.5rem 0 1rem;
+      color: var(--white);
+    }
+
+    .post-body ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .post-body ol li {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 0.75rem;
+    }
+
+    .post-body .callout {
+      border-left: 3px solid var(--blue);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      background: rgba(0,102,255,0.07);
+    }
+
+    .post-body .callout p {
+      margin-bottom: 0;
+      color: var(--light-blue);
+      font-size: 1.05rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .back-link:hover { border-bottom-color: var(--blue); }
+
+    .subscribe-strip {
+      background: var(--blue);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+
+    .subscribe-strip h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .subscribe-form {
+      display: flex;
+      gap: 0;
+      max-width: 460px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .subscribe-form input[type="email"] {
+      flex: 1;
+      min-width: 220px;
+      padding: 0.85rem 1.2rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      border: 2px solid var(--white);
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      outline: none;
+    }
+
+    .subscribe-form input[type="email"]::placeholder { color: rgba(255,255,255,0.65); }
+
+    .subscribe-form button {
+      padding: 0.85rem 1.6rem;
+      background: var(--dark-blue);
+      color: var(--white);
+      border: 2px solid var(--dark-blue);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .subscribe-form button:hover {
+      background: var(--dark);
+      border-color: var(--dark);
+    }
+
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--gray);
+      font-size: 0.88rem;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 1.2rem; }
+      .nav-links { gap: 1.2rem; }
+      .nav-links a { font-size: 0.85rem; }
+      .post-header, .post-body { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .post-header { padding-top: 3rem; }
+      .subscribe-strip { padding: 2.5rem 1.2rem; }
+      .subscribe-form { gap: 0.5rem; }
+      .subscribe-form input[type="email"], .subscribe-form button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">Govern the Future</a>
+    <ul class="nav-links">
+      <li><a href="/governance.html">Governance</a></li>
+      <li><a href="/technology.html">Technology</a></li>
+      <li><a href="/analysis.html">Analysis</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a class="nav-subscribe" href="/#subscribe">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <!-- POST HEADER -->
+  <header class="post-header">
+    <a class="back-link" href="/">← All Posts</a>
+    <span class="tag">Higher Education</span>
+    <h1>University Trustees Are Approving AI Policies They Don't Understand. Here's What That Costs.</h1>
+    <div class="post-meta">
+      <span>May 12, 2026</span>
+      <span>·</span>
+      <span>5 min read</span>
+    </div>
+  </header>
+
+  <!-- POST BODY -->
+  <article class="post-body">
+    <p>Most university trustees who voted on their institution's AI policy in the last 18 months couldn't explain what it actually governs. That's a problem that will compound.</p>
+
+    <p>The pattern is almost universal at this point. A faculty senate working group, or a provost's task force, or an academic technology committee drafts an AI policy after months of deliberation. The document arrives at the board meeting as item seven of eleven, after a facilities capital project and a Title IX update. The president summarizes it in three minutes. The board votes to approve it. The chair thanks the committee for its work.</p>
+
+    <p>Six months later, ask any trustee what the policy actually governs. Most cannot say. Ask whether it covers AI tools that faculty are currently using in the classroom. Most do not know. Ask what the enforcement mechanism is, who monitors compliance, and what the board would receive if something went wrong. The answer, almost always, is silence.</p>
+
+    <p>This is not a failure of trustee intelligence or institutional commitment. It is a structural governance failure — and it is accumulating consequences that will eventually be very difficult to explain to an accreditor, a plaintiff's attorney, or a reporter.</p>
+
+    <h2>The Rubber-Stamp Problem</h2>
+
+    <p>Higher education has a long tradition of shared governance — the idea that faculty hold primary authority over academic matters, while trustees hold fiduciary authority over institutional health and long-term strategy. It is a workable model when the domains are relatively distinct: faculty govern the curriculum, trustees govern the balance sheet.</p>
+
+    <p>AI does not fit cleanly into either domain. It is simultaneously an academic matter (how AI influences teaching, learning, and research) and a fiduciary matter (what risks does AI deployment create for the institution, and are those risks being managed). When institutions route AI policy development entirely through faculty governance channels — as most have — and then ask the board to ratify the result, trustees are being asked to take fiduciary accountability for a document they did not shape and may not understand.</p>
+
+    <p>The consequences of that gap are not hypothetical. They are already appearing in three forms.</p>
+
+    <p><strong>Policies that do not govern what they claim to govern.</strong> Most university AI policies drafted in 2024 and 2025 focus on student academic integrity — whether and how students may use AI in coursework. Very few address AI tools used by faculty in instruction, by administrative offices in operations, or by research teams in data analysis. The policies look comprehensive from a distance; they are narrowly scoped upon examination. Trustees who approved them without scrutiny are accountable for governance gaps they did not examine.</p>
+
+    <p><strong>No monitoring mechanism.</strong> A policy without a monitoring mechanism is a statement of intent, not a governance tool. Most university AI policies include no requirement for periodic reporting to the board — no dashboard, no compliance audit, no incident escalation protocol. If a faculty member's use of AI in grading produces a disparate impact lawsuit, the board's first awareness of the problem will likely be the lawsuit itself.</p>
+
+    <p><strong>Accreditor scrutiny is intensifying.</strong> Regional accreditors are beginning to ask about AI governance in institutional effectiveness reviews. The Higher Learning Commission, SACSCOC, and MSCHE have all issued guidance or asked questions about how institutions are governing AI. A board that approved a policy it cannot explain is poorly positioned to respond to accreditor inquiry — and accreditation risk has direct implications for federal financial aid eligibility, which is an institutional existential issue.</p>
+
+    <div class="callout">
+      <p>A policy without a monitoring mechanism is a statement of aspiration, not a governance tool. Trustees who approve AI policies they cannot explain have not discharged their fiduciary duty — they have documented their exposure to it.</p>
+    </div>
+
+    <h2>Three Questions Trustees Should Have Asked</h2>
+
+    <p>Asking these questions before approving any AI policy is not second-guessing faculty governance. It is the board doing its job — ensuring that what the institution adopts actually constitutes governance, not just documentation.</p>
+
+    <ol>
+      <li><strong>What does this policy actually cover, and what does it explicitly not cover?</strong> A policy that governs student AI use but not faculty AI use is a partial policy. Trustees should understand the scope explicitly — and should ask what governance mechanism exists for the areas the policy does not cover, and when it will.</li>
+      <li><strong>What is the enforcement mechanism, and who is accountable for it?</strong> Policies without enforcement mechanisms are wishes. Who investigates a complaint? Who has authority to impose consequences? Who reports compliance data to the board, and at what frequency? If no one can answer these questions, the policy is not operational.</li>
+      <li><strong>How will the board know if this policy is working — or if something has gone wrong?</strong> This is the monitoring question, and it is the one most frequently absent from higher education AI governance discussions. Trustees should require, as a condition of approval, that management specify what information the board will receive about AI governance and when — not wait to be told when there is a problem.</li>
+    </ol>
+
+    <h2>What Adequate Monitoring Looks Like</h2>
+
+    <p>Boards do not need to receive detailed operational reports on every AI tool deployed at their institution. They need to receive the right signal — a periodic summary that tells them whether the governance framework is functioning as intended.</p>
+
+    <p>That summary should include, at minimum: a current inventory of AI tools in institutional use by category (academic, administrative, research); any significant incidents involving AI — student complaints, faculty grievances, data security events — and how they were resolved; compliance rate with any training or disclosure requirements in the policy; and any changes in the regulatory or accreditation environment that affect the institution's obligations.</p>
+
+    <p>This is not a burdensome reporting requirement. It is what governance actually looks like. Trustees who approved AI policies without establishing this monitoring infrastructure have left their institutions operating on faith — which is not a fiduciary posture, and which accreditors, plaintiffs' attorneys, and journalists will eventually notice. The cost of building the infrastructure now is much lower than the cost of explaining its absence later.</p>
+  </article>
+
+  <!-- SUBSCRIBE STRIP -->
+  <section class="subscribe-strip">
+    <h2>Don't miss a post.</h2>
+    <form class="subscribe-form" id="post-subscribe-form" action="https://formspree.io/f/xayzdydv" method="POST">
+      <input type="hidden" name="form" value="governthefuture-subscribe">
+      <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="post-subscribe-success" style="display:none;color:#fff;font-weight:600;margin-top:1rem;">&#x2713; You're in. New insights every Monday.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Govern the Future | Weekly governance perspectives</p>
+    <p>&copy; 2026 Govern the Future</p>
+  </footer>
+
+  <script>
+    document.getElementById('post-subscribe-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      const resp = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+      if (resp.ok) { form.style.display = 'none'; document.getElementById('post-subscribe-success').style.display = 'block'; }
+      else { btn.textContent = 'Try again'; btn.disabled = false; }
+    });
+  </script>
+</body>
+</html>
