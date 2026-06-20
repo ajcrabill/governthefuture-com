@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Governance — Govern the Future</title>
+  <meta name="description" content="What separates boards that actually govern from boards that perform governance — across every sector." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #0066FF;
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --gray: #6B7280;
+      --offwhite: #F4F4F4;
+      --dim: #111111;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Space Grotesk', sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--black); height: 60px;
+      display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem;
+    }
+    .nav-logo { font-size: 1rem; font-weight: 700; letter-spacing: 0.04em; color: var(--white); text-transform: uppercase; white-space: nowrap; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-subscribe { background: var(--blue); color: var(--white) !important; padding: 0.45rem 1.1rem; font-size: 0.8rem !important; font-weight: 700 !important; letter-spacing: 0.06em !important; transition: opacity 0.15s !important; }
+    .nav-subscribe:hover { opacity: 0.85; }
+
+    .topic-hero { background: var(--black); padding: 4rem 2.5rem 3.5rem; border-bottom: 2px solid var(--blue); }
+    .topic-hero-inner { max-width: 1140px; margin: 0 auto; }
+    .topic-kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+    .topic-headline { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.02em; color: var(--white); margin-bottom: 0.75rem; line-height: 1.1; }
+    .topic-sub { font-size: 1.05rem; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.65; }
+
+    .article-list-section { max-width: 1140px; margin: 0 auto; padding: 3rem 2.5rem 4rem; }
+    .section-heading { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E5E5E5; }
+    .article-list { list-style: none; }
+    .article-list-item { border-bottom: 1px solid #E5E5E5; }
+    .article-list-item a { display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding: 1.4rem 0; width: 100%; transition: color 0.15s; }
+    .article-list-item a:hover .al-title { color: var(--blue); }
+    .article-list-item a:hover .al-arrow { opacity: 1; color: var(--blue); }
+    .al-left { display: flex; align-items: baseline; gap: 1.25rem; flex: 1; min-width: 0; }
+    .al-cat { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); white-space: nowrap; flex-shrink: 0; }
+    .al-title { font-size: 1.05rem; font-weight: 600; color: var(--black); line-height: 1.35; transition: color 0.15s; }
+    .al-right { display: flex; align-items: center; gap: 1.25rem; flex-shrink: 0; }
+    .al-date { font-size: 0.78rem; color: #9CA3AF; white-space: nowrap; }
+    .al-arrow { font-size: 1rem; color: #D1D5DB; transition: color 0.15s, opacity 0.15s; opacity: 0.4; }
+
+    .subscribe-band { background: var(--offwhite); padding: 4rem 2.5rem; border-top: 2px solid var(--blue); }
+    .subscribe-band-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+    .subscribe-kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+    .subscribe-heading { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .subscribe-sub { font-size: 0.95rem; color: var(--gray); margin-bottom: 2rem; }
+    .subscribe-form { display: flex; gap: 0; }
+    .subscribe-form input[type="email"] { flex: 1; padding: 0.85rem 1.1rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; border: 2px solid var(--black); border-right: none; background: var(--white); color: var(--black); outline: none; }
+    .subscribe-form input[type="email"]::placeholder { color: #9CA3AF; }
+    .subscribe-form button { padding: 0.85rem 1.5rem; background: var(--black); color: var(--white); border: 2px solid var(--black); font-family: 'Space Grotesk', sans-serif; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.04em; cursor: pointer; text-transform: uppercase; transition: background 0.15s, border-color 0.15s; white-space: nowrap; }
+    .subscribe-form button:hover { background: var(--blue); border-color: var(--blue); }
+    .subscribe-success { display: none; font-size: 0.95rem; font-weight: 600; color: var(--blue); padding: 0.75rem 0; }
+
+    footer { background: var(--black); padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-size: 0.9rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); }
+    .footer-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.4); max-width: 380px; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.3); white-space: nowrap; }
+
+    @media (max-width: 860px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { gap: 1.25rem; }
+      .topic-hero { padding: 3rem 1.5rem; }
+      .article-list-section { padding: 2.5rem 1.5rem; }
+      .subscribe-band { padding: 3rem 1.5rem; }
+      .subscribe-form { flex-direction: column; }
+      .subscribe-form input[type="email"] { border-right: 2px solid var(--black); }
+      .subscribe-form button { width: 100%; }
+      footer { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+    }
+    @media (max-width: 560px) {
+      .nav-links li:not(:last-child) { display: none; }
+      .al-left { flex-direction: column; gap: 0.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">Govern the Future</a>
+    <ul class="nav-links">
+      <li><a href="/governance.html">Governance</a></li>
+      <li><a href="/technology.html">Technology</a></li>
+      <li><a href="/analysis.html">Analysis</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a class="nav-subscribe" href="/#subscribe">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <section class="topic-hero">
+    <div class="topic-hero-inner">
+      <p class="topic-kicker">Topic</p>
+      <h1 class="topic-headline">Outcomes-Focused Governance</h1>
+      <p class="topic-sub">What separates boards that actually govern from boards that perform governance — across every sector.</p>
+    </div>
+  </section>
+
+  <section class="article-list-section">
+    <p class="section-heading">All Articles</p>
+    <ul class="article-list">
+      <li class="article-list-item">
+        <a href="posts/yes-no-ai-pitch.html">
+          <div class="al-left">
+            <span class="al-cat">Corporate Governance</span>
+            <span class="al-title">The Board That Said Yes to Every AI Pitch — and the One That Said No to All of Them</span>
+          </div>
+          <div class="al-right">
+            <span class="al-date">Jun 9, 2026</span>
+            <span class="al-arrow">&rarr;</span>
+          </div>
+        </a>
+      </li>
+      <li class="article-list-item">
+        <a href="posts/nonprofit-mission-drift.html">
+          <div class="al-left">
+            <span class="al-cat">Nonprofit Boards</span>
+            <span class="al-title">Mission Drift in the Age of AI: What Nonprofit Boards Need to Clarify Now</span>
+          </div>
+          <div class="al-right">
+            <span class="al-date">Jun 2, 2026</span>
+            <span class="al-arrow">&rarr;</span>
+          </div>
+        </a>
+      </li>
+      <li class="article-list-item">
+        <a href="posts/outcomes-focus.html">
+          <div class="al-left">
+            <span class="al-cat">Governance</span>
+            <span class="al-title">What Outcomes-Focused Governance Actually Requires — Across Every Sector</span>
+          </div>
+          <div class="al-right">
+            <span class="al-date">May 5, 2026</span>
+            <span class="al-arrow">&rarr;</span>
+          </div>
+        </a>
+      </li>
+      <li class="article-list-item">
+        <a href="posts/demographic-governance-gap.html">
+          <div class="al-left">
+            <span class="al-cat">Governance</span>
+            <span class="al-title">The Demographic Governance Gap</span>
+          </div>
+          <div class="al-right">
+            <span class="al-date">Apr 28, 2026</span>
+            <span class="al-arrow">&rarr;</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="subscribe-band" id="subscribe">
+    <div class="subscribe-band-inner">
+      <p class="subscribe-kicker">Weekly Newsletter</p>
+      <h2 class="subscribe-heading">Don't miss a post.</h2>
+      <p class="subscribe-sub">Weekly governance insights at the intersection of governance and technology — delivered every Monday.</p>
+      <form class="subscribe-form" id="subscribe-form" action="https://formspree.io/f/xayzdydv" method="POST">
+        <input type="hidden" name="form" value="governthefuture-subscribe">
+        <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="subscribe-success" id="subscribe-success">&#x2713; You're in. New insights every Monday.</div>
+    </div>
+  </section>
+
+  <footer id="about">
+    <span class="footer-logo">Govern the Future</span>
+    <p class="footer-tagline">Weekly governance insights at the intersection of governance and technology.</p>
+    <span class="footer-copy">&copy; 2026</span>
+  </footer>
+
+  <script>
+    const form = document.getElementById('subscribe-form');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const resp = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+      if (resp.ok) { form.style.display = 'none'; document.getElementById('subscribe-success').style.display = 'block'; }
+    });
+  </script>
+</body>
+</html>
