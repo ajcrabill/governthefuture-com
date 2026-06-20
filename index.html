@@ -514,11 +514,11 @@
   <nav>
     <a class="nav-logo" href="/">Govern the Future</a>
     <ul class="nav-links">
-      <li><a href="#latest">Governance</a></li>
-      <li><a href="#latest">Technology</a></li>
-      <li><a href="#latest">Analysis</a></li>
+      <li><a href="/governance.html">Governance</a></li>
+      <li><a href="/technology.html">Technology</a></li>
+      <li><a href="/analysis.html">Analysis</a></li>
       <li><a href="#about">About</a></li>
-      <li><a class="nav-subscribe" href="#subscribe">Subscribe</a></li>
+      <li><a class="nav-subscribe" href="#" id="nav-subscribe-btn">Subscribe</a></li>
     </ul>
   </nav>
 
@@ -681,6 +681,30 @@
           </div>
         </a>
       </li>
+      <li class="recent-item">
+        <a href="posts/demographic-governance-gap.html">
+          <div class="recent-left">
+            <span class="recent-cat">Governance</span>
+            <span class="recent-title">The Demographic Governance Gap</span>
+          </div>
+          <div class="recent-right">
+            <span class="recent-date">Apr 28, 2026</span>
+            <span class="recent-arrow">&rarr;</span>
+          </div>
+        </a>
+      </li>
+      <li class="recent-item">
+        <a href="posts/ai-board-job-harder.html">
+          <div class="recent-left">
+            <span class="recent-cat">Technology</span>
+            <span class="recent-title">AI Will Make the Board's Job Harder Before It Makes It Easier</span>
+          </div>
+          <div class="recent-right">
+            <span class="recent-date">Apr 21, 2026</span>
+            <span class="recent-arrow">&rarr;</span>
+          </div>
+        </a>
+      </li>
     </ul>
   </section>
 
@@ -721,5 +745,50 @@
       }
     });
   </script>
+
+<!-- SUBSCRIBE MODAL -->
+<div id="subscribe-modal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#111;border:1px solid #333;border-top:3px solid #0066FF;max-width:460px;width:100%;padding:2.5rem;position:relative;">
+    <button id="modal-close" style="position:absolute;top:1rem;right:1rem;background:none;border:none;color:#888;font-size:1.5rem;cursor:pointer;line-height:1;">&times;</button>
+    <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#0066FF;margin-bottom:0.5rem;">Weekly Newsletter</p>
+    <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:0.5rem;letter-spacing:-0.02em;">Stay ahead of the curve.</h3>
+    <p style="font-size:0.9rem;color:#6B7280;margin-bottom:1.5rem;">Governance insights at the intersection of boards and technology — every Monday.</p>
+    <form id="modal-subscribe-form">
+      <input type="hidden" name="form" value="governthefuture-subscribe">
+      <input type="email" name="email" placeholder="your@email.com" required style="width:100%;padding:0.8rem 1rem;font-family:'Space Grotesk',sans-serif;font-size:0.95rem;border:2px solid #333;background:#0a0a0a;color:#fff;outline:none;margin-bottom:0.75rem;">
+      <button type="submit" style="width:100%;padding:0.8rem;background:#0066FF;color:#fff;border:none;font-family:'Space Grotesk',sans-serif;font-size:0.875rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;cursor:pointer;">Subscribe</button>
+    </form>
+    <p id="modal-success" style="display:none;color:#0066FF;font-weight:600;font-size:0.95rem;margin-top:1rem;">&#x2713; You're in. New insights every Monday.</p>
+  </div>
+</div>
+
+<script>
+  const navBtn = document.getElementById('nav-subscribe-btn');
+  const modal = document.getElementById('subscribe-modal');
+  const closeBtn = document.getElementById('modal-close');
+  navBtn.addEventListener('click', e => { e.preventDefault(); modal.style.display = 'flex'; });
+  closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+  modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.style.display = 'none'; });
+  document.getElementById('modal-subscribe-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    const resp = await fetch('https://formspree.io/f/xayzdydv', {
+      method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      form.style.display = 'none';
+      document.getElementById('modal-success').style.display = 'block';
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  });
+</script>
+
 </body>
 </html>
+
