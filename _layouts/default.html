@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} — Govern the Future{% else %}Govern the Future — Governance &amp; Technological Intelligence{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Weekly governance insights at the intersection of governance and technology — for corporate boards, nonprofits, hospitals, universities, startups, and every board navigating the age of AI.{% endif %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:    #0066FF;
+      --black:   #0A0A0A;
+      --white:   #FFFFFF;
+      --gray:    #6B7280;
+      --offwhite: #F4F4F4;
+      --dim:     #111111;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+    }
+
+    .nav-logo {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-subscribe {
+      background: var(--blue);
+      color: var(--white) !important;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.8rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.06em !important;
+      transition: opacity 0.15s !important;
+    }
+
+    .nav-subscribe:hover { opacity: 0.85; color: var(--white) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--black);
+      padding: 5rem 2.5rem 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-content { max-width: 700px; }
+
+    .hero-category {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-headline {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-teaser {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 400;
+      line-height: 1.65;
+      margin-bottom: 1.75rem;
+      max-width: 560px;
+    }
+
+    .hero-read {
+      color: var(--blue);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      transition: opacity 0.15s;
+    }
+
+    .hero-read:hover { opacity: 0.75; }
+
+    .hero-deco {
+      font-size: clamp(5rem, 12vw, 9rem);
+      font-weight: 700;
+      color: rgba(255,255,255,0.05);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    /* ── BLUE RULE ── */
+    .blue-rule {
+      height: 2px;
+      background: var(--blue);
+      width: 100%;
+    }
+
+    /* ── ARTICLE GRID ── */
+    .grid-section {
+      padding: 3rem 2.5rem 3.5rem;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: 60% 1fr;
+      gap: 2px;
+      background: #E5E5E5;
+    }
+
+    .article-grid-right {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .article-cell {
+      background: var(--white);
+      padding: 2rem 2rem 2.25rem;
+      transition: background 0.15s;
+    }
+
+    .article-cell:hover { background: var(--offwhite); }
+
+    .article-cell.large { padding: 2.5rem 2.5rem 2.75rem; }
+
+    .article-cat {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.85rem;
+    }
+
+    .article-cell.large h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+    }
+
+    .article-cell h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+    }
+
+    .article-teaser {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .article-cell.large .article-teaser {
+      font-size: 1rem;
+      max-width: 480px;
+    }
+
+    .article-date {
+      font-size: 0.78rem;
+      color: #9CA3AF;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-read {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.03em;
+      transition: opacity 0.15s;
+    }
+
+    .article-read:hover { opacity: 0.7; }
+
+    /* ── WHAT WE COVER STRIP ── */
+    .cover-strip {
+      background: var(--dim);
+      padding: 3.5rem 2.5rem;
+    }
+
+    .cover-strip-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+
+    .cover-item-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.75rem;
+    }
+
+    .cover-item-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .cover-item-desc {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.65;
+    }
+
+    /* ── RECENT LIST ── */
+    .recent-section {
+      padding: 3.5rem 2.5rem;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .recent-list { list-style: none; }
+
+    .recent-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .recent-item a {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      width: 100%;
+      gap: 1.5rem;
+      transition: color 0.15s;
+    }
+
+    .recent-item a:hover .recent-title { color: var(--blue); }
+    .recent-item a:hover .recent-arrow { opacity: 1; color: var(--blue); }
+
+    .recent-left {
+      display: flex;
+      align-items: baseline;
+      gap: 1.25rem;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .recent-cat {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .recent-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--black);
+      line-height: 1.35;
+      transition: color 0.15s;
+    }
+
+    .recent-right {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .recent-date {
+      font-size: 0.78rem;
+      color: #9CA3AF;
+      white-space: nowrap;
+    }
+
+    .recent-arrow {
+      font-size: 1rem;
+      color: #D1D5DB;
+      transition: color 0.15s, opacity 0.15s;
+      opacity: 0.4;
+    }
+
+    /* ── SUBSCRIBE BAND ── */
+    .subscribe-band {
+      background: var(--offwhite);
+      padding: 4rem 2.5rem;
+      border-top: 2px solid var(--blue);
+    }
+
+    .subscribe-band-inner {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subscribe-kicker {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.75rem;
+    }
+
+    .subscribe-heading {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .subscribe-sub {
+      font-size: 0.95rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+    }
+
+    .subscribe-form {
+      display: flex;
+      gap: 0;
+    }
+
+    .subscribe-form input[type="email"] {
+      flex: 1;
+      padding: 0.85rem 1.1rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      border: 2px solid var(--black);
+      border-right: none;
+      background: var(--white);
+      color: var(--black);
+      outline: none;
+    }
+
+    .subscribe-form input[type="email"]::placeholder { color: #9CA3AF; }
+
+    .subscribe-form button {
+      padding: 0.85rem 1.5rem;
+      background: var(--black);
+      color: var(--white);
+      border: 2px solid var(--black);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+
+    .subscribe-form button:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .subscribe-success {
+      display: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--blue);
+      padding: 0.75rem 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      padding: 2.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .footer-tagline {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      max-width: 380px;
+    }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      white-space: nowrap;
+    }
+
+    /* ── POST STYLES ── */
+    .post-header-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2.5rem;
+    }
+
+    .post-back {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .post-back:hover { border-bottom-color: var(--blue); }
+
+    .post-tag {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .post-header-wrap h1 {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .post-date {
+      font-size: 0.82rem;
+      color: var(--gray);
+      margin-bottom: 0;
+    }
+
+    .post-content-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 5rem;
+      border-top: 1px solid #E5E5E5;
+      margin-top: 0;
+    }
+
+    .post-content-wrap p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #1a1a1a;
+      margin-bottom: 1.75rem;
+    }
+
+    .post-content-wrap p strong { font-weight: 600; }
+
+    .post-content-wrap h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 2.5rem 0 1rem;
+      color: var(--black);
+    }
+
+    .post-content-wrap ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .post-content-wrap ol li {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #1a1a1a;
+      margin-bottom: 0.75rem;
+    }
+
+    .post-content-wrap .callout {
+      border-left: 3px solid var(--blue);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      background: rgba(0,102,255,0.05);
+    }
+
+    .post-content-wrap .callout p {
+      margin-bottom: 0;
+      color: #1a2a4a;
+      font-size: 1.05rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { gap: 1.25rem; }
+
+      .hero { padding: 3.5rem 1.5rem 3rem; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-deco { display: none; }
+
+      .grid-section { padding: 2rem 1.5rem; }
+      .article-grid { grid-template-columns: 1fr; }
+      .article-grid-right { grid-template-rows: auto; }
+
+      .cover-strip { padding: 2.5rem 1.5rem; }
+      .cover-strip-inner { grid-template-columns: 1fr; gap: 2rem; }
+
+      .recent-section { padding: 2.5rem 1.5rem; }
+
+      .subscribe-band { padding: 3rem 1.5rem; }
+      .subscribe-form { flex-direction: column; }
+      .subscribe-form input[type="email"] { border-right: 2px solid var(--black); }
+      .subscribe-form button { width: 100%; }
+
+      footer { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+
+      .post-header-wrap, .post-content-wrap { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .post-header-wrap { padding-top: 2.5rem; }
+    }
+
+    @media (max-width: 560px) {
+      .nav-links li:not(:last-child) { display: none; }
+      .recent-left { flex-direction: column; gap: 0.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">Govern the Future</a>
+    <ul class="nav-links">
+      <li><a href="/governance.html">Governance</a></li>
+      <li><a href="/technology.html">Technology</a></li>
+      <li><a href="/analysis.html">Analysis</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a class="nav-subscribe" href="#" id="nav-subscribe-btn">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  {{ content }}
+
+  <!-- SUBSCRIBE -->
+  <section class="subscribe-band" id="subscribe">
+    <div class="subscribe-band-inner">
+      <p class="subscribe-kicker">Weekly Newsletter</p>
+      <h2 class="subscribe-heading">Don't miss a post.</h2>
+      <p class="subscribe-sub">Weekly governance insights at the intersection of governance and technology — delivered every Monday.</p>
+      <form class="subscribe-form" id="subscribe-form" action="https://formspree.io/f/xayzdydv" method="POST">
+        <input type="hidden" name="form" value="governthefuture-subscribe">
+        <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="subscribe-success" id="subscribe-success">&#x2713; You're in. New insights every Monday.</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="about">
+    <span class="footer-logo">Govern the Future</span>
+    <p class="footer-tagline">Weekly governance insights at the intersection of governance and technology.</p>
+    <span class="footer-copy">&copy; 2026</span>
+  </footer>
+
+  <script>
+    const form = document.getElementById('subscribe-form');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const resp = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (resp.ok) {
+        form.style.display = 'none';
+        document.getElementById('subscribe-success').style.display = 'block';
+      }
+    });
+  </script>
+
+<!-- SUBSCRIBE MODAL -->
+<div id="subscribe-modal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#111;border:1px solid #333;border-top:3px solid #0066FF;max-width:460px;width:100%;padding:2.5rem;position:relative;">
+    <button id="modal-close" style="position:absolute;top:1rem;right:1rem;background:none;border:none;color:#888;font-size:1.5rem;cursor:pointer;line-height:1;">&times;</button>
+    <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#0066FF;margin-bottom:0.5rem;">Weekly Newsletter</p>
+    <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:0.5rem;letter-spacing:-0.02em;">Stay ahead of the curve.</h3>
+    <p style="font-size:0.9rem;color:#6B7280;margin-bottom:1.5rem;">Governance insights at the intersection of boards and technology — every Monday.</p>
+    <form id="modal-subscribe-form">
+      <input type="hidden" name="form" value="governthefuture-subscribe">
+      <input type="email" name="email" placeholder="your@email.com" required style="width:100%;padding:0.8rem 1rem;font-family:'Space Grotesk',sans-serif;font-size:0.95rem;border:2px solid #333;background:#0a0a0a;color:#fff;outline:none;margin-bottom:0.75rem;">
+      <button type="submit" style="width:100%;padding:0.8rem;background:#0066FF;color:#fff;border:none;font-family:'Space Grotesk',sans-serif;font-size:0.875rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;cursor:pointer;">Subscribe</button>
+    </form>
+    <p id="modal-success" style="display:none;color:#0066FF;font-weight:600;font-size:0.95rem;margin-top:1rem;">&#x2713; You're in. New insights every Monday.</p>
+  </div>
+</div>
+
+<script>
+  const navBtn = document.getElementById('nav-subscribe-btn');
+  const modal = document.getElementById('subscribe-modal');
+  const closeBtn = document.getElementById('modal-close');
+  navBtn.addEventListener('click', e => { e.preventDefault(); modal.style.display = 'flex'; });
+  closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+  modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.style.display = 'none'; });
+  document.getElementById('modal-subscribe-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    const resp = await fetch('https://formspree.io/f/xayzdydv', {
+      method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      form.style.display = 'none';
+      document.getElementById('modal-success').style.display = 'block';
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>

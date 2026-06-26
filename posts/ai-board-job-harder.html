@@ -1,347 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Will Make the Board's Job Harder Before It Makes It Easier — Govern the Future</title>
-  <meta name="description" content="Every major ed-tech company is about to market AI tools directly to school districts. The board members who haven't defined clear outcome metrics will have no way to evaluate whether any of them work." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+---
+layout: post
+title: "AI Will Make the Board's Job Harder Before It Makes It Easier"
+category: "Technology"
+date: "2026-04-21"
+description: "Every major ed-tech company is about to market AI tools directly to school districts."
+---
 
-    :root {
-      --blue:       #0066FF;
-      --dark:       #0A0A0F;
-      --white:      #FFFFFF;
-      --dark-blue:  #003399;
-      --light-blue: #E8F0FF;
-      --gray:       #6B7280;
-    }
+<p>Every major ed-tech company is about to market AI tools directly to school districts. Boards that haven't defined clear outcome metrics will have no way to evaluate whether any of them work.</p>
 
-    html { scroll-behavior: smooth; }
+<p>Here's the pitch cycle you're going to see: A company approaches the district with an AI tutoring tool, a generative grading assistant, or an attendance prediction system. They have impressive demo data. They have a case study from another district. They have a price that seems reasonable. The superintendent brings it to the board for approval.</p>
 
-    body {
-      font-family: 'Space Grotesk', sans-serif;
-      background: var(--dark);
-      color: var(--white);
-      line-height: 1.6;
-    }
+<p>The board has a choice at this moment that almost nobody talks about.</p>
 
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--dark);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
+<p><strong>If the board has done its governance work</strong>, it can ask: What specific student outcome are we trying to improve? How will we measure whether this tool is contributing to that improvement? What's our threshold for discontinuing it if the data doesn't show progress? These questions take about ten minutes and radically change what gets purchased.</p>
 
-    .nav-logo {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--blue);
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+<p><strong>If the board hasn't done its governance work</strong> — if it doesn't have specific, measurable student outcome goals with defined timelines — it will evaluate the AI tool the same way it evaluates every other vendor: demo quality, reference calls, price. This produces the pattern we've seen for 30 years with ed-tech. The research on ed-tech investment is consistent: huge spending, negligible outcome improvement. AI will make this worse before it makes it better, because the tools are more impressive and the demos are more convincing.</p>
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+<div class="callout">
+  <p>The governance question isn't "is this AI tool good?" It's "what problem are we trying to solve, and how will we know if we've solved it?"</p>
+</div>
 
-    .nav-links a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
-    }
+<h2>What boards should do now</h2>
 
-    .nav-links a:hover {
-      color: var(--blue);
-      border-bottom-color: var(--blue);
-    }
+<p>Before any AI procurement decision, the board should establish — in writing, publicly — what student outcomes it is trying to improve and how it will measure them. This is basic outcomes-focused governance. But it becomes especially critical when the technology is designed to be persuasive.</p>
 
-    /* ── POST HEADER ── */
-    .post-header {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 5rem 2rem 3rem;
-    }
+<p>Specific steps:</p>
 
-    .tag {
-      display: inline-block;
-      background: var(--blue);
-      color: var(--white);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.75rem;
-      margin-bottom: 1.5rem;
-    }
+<ol>
+  <li>Establish 3–5 measurable student outcome goals with specific targets and timelines (e.g., "80% of students reading at grade level by 2027"). If you don't have these, AI procurement is premature.</li>
+  <li>Require that any AI tool proposal include: the specific outcome it claims to improve, the evidence that it improves that outcome, the proposed measurement method, and a discontinuation trigger (if X doesn't happen in Y months, we stop).</li>
+  <li>Build AI procurement review into your monitoring calendar, not just the initial approval. Boards that approve tools and never revisit whether they're working are not doing their governance job.</li>
+</ol>
 
-    .post-header h1 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.25rem;
-    }
+<h2>The harder problem</h2>
 
-    .post-meta {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      color: var(--gray);
-      font-size: 0.88rem;
-      font-weight: 400;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+<p>AI tools will also produce more data than most boards have ever dealt with. This is actually the bigger governance challenge. Boards that currently struggle to engage meaningfully with standard assessment data will be completely overwhelmed by AI-generated student performance dashboards.</p>
 
-    .post-meta span { display: flex; align-items: center; gap: 0.4rem; }
+<p>The solution isn't better AI tools. It's better governance frameworks. Boards need to decide in advance which data points matter — which metrics connect to their stated student outcome goals — and resist the AI vendor's temptation to track everything and report on everything.</p>
 
-    /* ── POST BODY ── */
-    .post-body {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 3rem 2rem 5rem;
-    }
+<p>More data, without better governance, produces exactly what ed-tech has produced for decades: impressive-looking dashboards that don't change what students learn.</p>
 
-    .post-body p {
-      font-size: 1.1rem;
-      line-height: 1.85;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 1.75rem;
-    }
+<p><strong>The board that gets this right</strong> will have done the governance work before the AI sales cycle starts. It will have specific goals, clear monitoring processes, and the discipline to evaluate tools against outcomes rather than features. That board will be able to use AI to genuinely improve student learning.</p>
 
-    .post-body p strong {
-      color: var(--white);
-      font-weight: 600;
-    }
+<p>The board that doesn't will buy a lot of impressive tools and remain confused about whether students are learning anything.</p>
 
-    .post-body h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin: 2.5rem 0 1rem;
-      color: var(--white);
-    }
-
-    .post-body ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .post-body ol li {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 0.75rem;
-    }
-
-    .post-body .callout {
-      border-left: 3px solid var(--blue);
-      padding: 1.25rem 1.5rem;
-      margin: 2rem 0;
-      background: rgba(0,102,255,0.07);
-    }
-
-    .post-body .callout p {
-      margin-bottom: 0;
-      color: var(--light-blue);
-      font-size: 1.05rem;
-    }
-
-    /* ── BACK LINK ── */
-    .back-link {
-      display: inline-block;
-      color: var(--blue);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-    .back-link:hover { border-bottom-color: var(--blue); }
-
-    /* ── SUBSCRIBE STRIP ── */
-    .subscribe-strip {
-      background: var(--blue);
-      padding: 3.5rem 2rem;
-      text-align: center;
-    }
-
-    .subscribe-strip h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-
-    .subscribe-form {
-      display: flex;
-      gap: 0;
-      max-width: 460px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
-
-    .subscribe-form input[type="email"] {
-      flex: 1;
-      min-width: 220px;
-      padding: 0.85rem 1.2rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
-      border: 2px solid var(--white);
-      background: rgba(255,255,255,0.12);
-      color: var(--white);
-      outline: none;
-    }
-
-    .subscribe-form input[type="email"]::placeholder { color: rgba(255,255,255,0.65); }
-
-    .subscribe-form button {
-      padding: 0.85rem 1.6rem;
-      background: var(--dark-blue);
-      color: var(--white);
-      border: 2px solid var(--dark-blue);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .subscribe-form button:hover {
-      background: var(--dark);
-      border-color: var(--dark);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--dark);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 2.5rem 2rem;
-      text-align: center;
-    }
-
-    footer p {
-      color: var(--gray);
-      font-size: 0.88rem;
-      line-height: 1.8;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      nav { padding: 0 1.2rem; }
-      .nav-links { gap: 1.2rem; }
-      .nav-links a { font-size: 0.85rem; }
-      .post-header, .post-body { padding-left: 1.2rem; padding-right: 1.2rem; }
-      .post-header { padding-top: 3rem; }
-      .subscribe-strip { padding: 2.5rem 1.2rem; }
-      .subscribe-form { gap: 0.5rem; }
-      .subscribe-form input[type="email"], .subscribe-form button { width: 100%; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <a class="nav-logo" href="/">Govern the Future</a>
-    <ul class="nav-links">
-      <li><a href="/#latest">Posts</a></li>
-      <li><a href="/#about">About</a></li>
-      <li><a href="/#subscribe">Subscribe</a></li>
-    </ul>
-  </nav>
-
-  <!-- POST HEADER -->
-  <header class="post-header">
-    <a class="back-link" href="/">← All Posts</a>
-    <span class="tag">AI &amp; Governance</span>
-    <h1>AI Will Make the Board's Job Harder Before It Makes It Easier</h1>
-    <div class="post-meta">
-      <span>June 16, 2026</span>
-      <span>·</span>
-      <span>4 min read</span>
-    </div>
-  </header>
-
-  <!-- POST BODY -->
-  <article class="post-body">
-
-    <p>Every major ed-tech company is about to market AI tools directly to school districts. Boards that haven't defined clear outcome metrics will have no way to evaluate whether any of them work.</p>
-
-    <p>Here's the pitch cycle you're going to see: A company approaches the district with an AI tutoring tool, a generative grading assistant, or an attendance prediction system. They have impressive demo data. They have a case study from another district. They have a price that seems reasonable. The superintendent brings it to the board for approval.</p>
-
-    <p>The board has a choice at this moment that almost nobody talks about.</p>
-
-    <p><strong>If the board has done its governance work</strong>, it can ask: What specific student outcome are we trying to improve? How will we measure whether this tool is contributing to that improvement? What's our threshold for discontinuing it if the data doesn't show progress? These questions take about ten minutes and radically change what gets purchased.</p>
-
-    <p><strong>If the board hasn't done its governance work</strong> — if it doesn't have specific, measurable student outcome goals with defined timelines — it will evaluate the AI tool the same way it evaluates every other vendor: demo quality, reference calls, price. This produces the pattern we've seen for 30 years with ed-tech. The research on ed-tech investment is consistent: huge spending, negligible outcome improvement. AI will make this worse before it makes it better, because the tools are more impressive and the demos are more convincing.</p>
-
-    <div class="callout">
-      <p>The governance question isn't "is this AI tool good?" It's "what problem are we trying to solve, and how will we know if we've solved it?"</p>
-    </div>
-
-    <h2>What boards should do now</h2>
-
-    <p>Before any AI procurement decision, the board should establish — in writing, publicly — what student outcomes it is trying to improve and how it will measure them. This is basic outcomes-focused governance. But it becomes especially critical when the technology is designed to be persuasive.</p>
-
-    <p>Specific steps:</p>
-
-    <ol>
-      <li>Establish 3–5 measurable student outcome goals with specific targets and timelines (e.g., "80% of students reading at grade level by 2027"). If you don't have these, AI procurement is premature.</li>
-      <li>Require that any AI tool proposal include: the specific outcome it claims to improve, the evidence that it improves that outcome, the proposed measurement method, and a discontinuation trigger (if X doesn't happen in Y months, we stop).</li>
-      <li>Build AI procurement review into your monitoring calendar, not just the initial approval. Boards that approve tools and never revisit whether they're working are not doing their governance job.</li>
-    </ol>
-
-    <h2>The harder problem</h2>
-
-    <p>AI tools will also produce more data than most boards have ever dealt with. This is actually the bigger governance challenge. Boards that currently struggle to engage meaningfully with standard assessment data will be completely overwhelmed by AI-generated student performance dashboards.</p>
-
-    <p>The solution isn't better AI tools. It's better governance frameworks. Boards need to decide in advance which data points matter — which metrics connect to their stated student outcome goals — and resist the AI vendor's temptation to track everything and report on everything.</p>
-
-    <p>More data, without better governance, produces exactly what ed-tech has produced for decades: impressive-looking dashboards that don't change what students learn.</p>
-
-    <p><strong>The board that gets this right</strong> will have done the governance work before the AI sales cycle starts. It will have specific goals, clear monitoring processes, and the discipline to evaluate tools against outcomes rather than features. That board will be able to use AI to genuinely improve student learning.</p>
-
-    <p>The board that doesn't will buy a lot of impressive tools and remain confused about whether students are learning anything.</p>
-
-    <p>The AI revolution in education is coming. Whether it helps students or just helps vendors depends, in significant part, on whether school boards govern well.</p>
-
-  </article>
-
-  <!-- SUBSCRIBE STRIP -->
-  <section class="subscribe-strip">
-    <h2>Don't miss a post.</h2>
-    <form class="subscribe-form" onsubmit="return false;">
-      <input type="email" placeholder="your@email.com" aria-label="Email address" />
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Govern the Future | Weekly governance perspectives</p>
-    <p>© 2026 Govern the Future</p>
-  </footer>
-
-</body>
-</html>
+<p>The AI revolution in education is coming. Whether it helps students or just helps vendors depends, in significant part, on whether school boards govern well.</p>

@@ -1,362 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hospital Boards and AI Diagnostics: When the Algorithm Is More Accurate Than the Doctor, Who Decides? — Govern the Future</title>
-  <meta name="description" content="Radiology AI systems are now outperforming human radiologists on certain detection tasks. Hospital boards that haven't addressed this governance question are about to face it in a patient harm lawsuit." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+---
+layout: post
+title: "Hospital Boards and AI Diagnostics: When the Algorithm Is More Accurate Than the Doctor, Who Decides?"
+category: "Healthcare"
+date: "2026-05-19"
+description: "Radiology AI systems are now outperforming human radiologists on certain detection tasks."
+---
 
-    :root {
-      --blue:       #0066FF;
-      --dark:       #0A0A0F;
-      --white:      #FFFFFF;
-      --dark-blue:  #003399;
-      --light-blue: #E8F0FF;
-      --gray:       #6B7280;
-    }
+<p>Radiology AI systems are now outperforming human radiologists on certain detection tasks. Hospital boards that haven't addressed this governance question are about to face it in a patient harm lawsuit.</p>
 
-    html { scroll-behavior: smooth; }
+<p>The performance data is no longer speculative. FDA-cleared AI systems for chest X-ray interpretation, mammography screening, and diabetic retinopathy detection have demonstrated sensitivity and specificity rates that match or exceed experienced specialists in controlled study conditions. The question of whether AI can do this is settled. The governance questions — who decides when to use it, what happens when the AI and the physician disagree, and what the hospital's board is accountable for when it goes wrong — are nowhere near settled.</p>
 
-    body {
-      font-family: 'Space Grotesk', sans-serif;
-      background: var(--dark);
-      color: var(--white);
-      line-height: 1.6;
-    }
+<p>Most hospital boards have not had the conversation. They approved the capital expenditure for an AI diagnostic system, delegated implementation to the clinical and IT leadership teams, and moved on to the next item on the agenda. That is not governance. That is procurement. And when the first significant patient harm event involving an AI diagnostic system reaches litigation, the distinction will matter enormously.</p>
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--dark);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
+<h2>The Governance Gap No One Is Talking About</h2>
 
-    .nav-logo {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--blue);
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+<p>Here is the scenario that is coming to hospital boards everywhere, whether they have prepared for it or not:</p>
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+<p>An AI system flags an image as high-risk. The radiologist reviews the image, disagrees with the AI's assessment, and documents her clinical judgment overriding the system's recommendation. The patient is discharged without further workup. Three months later, the patient is diagnosed with a condition the AI had identified. The patient sues.</p>
 
-    .nav-links a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
-    }
+<p>In the ensuing litigation, the questions will not be limited to whether the radiologist's clinical judgment was reasonable. They will include: What was the hospital's policy on AI override documentation? What training did physicians receive on how to interpret and weigh AI recommendations? What monitoring did the hospital conduct on its physicians' override rates and subsequent patient outcomes? What did the board know about the AI system's performance in this clinical context, and when did they know it?</p>
 
-    .nav-links a:hover {
-      color: var(--blue);
-      border-bottom-color: var(--blue);
-    }
+<p>If the board cannot answer those questions — if there is no policy, no training requirement, no monitoring program, and no board-level awareness of the system's performance — the institution's legal exposure extends well beyond the individual clinical decision. The board's failure to establish clinical AI governance becomes part of the liability narrative.</p>
 
-    .post-header {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 5rem 2rem 3rem;
-    }
+<div class="callout">
+  <p>Clinical AI governance is not IT governance. Approving a vendor contract and delegating implementation is procurement. Establishing the policy framework within which AI influences clinical decisions — and monitoring whether that framework is working — is governance. Hospital boards are accountable for the latter whether or not they have done it.</p>
+</div>
 
-    .tag {
-      display: inline-block;
-      background: var(--blue);
-      color: var(--white);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.75rem;
-      margin-bottom: 1.5rem;
-    }
+<h2>What a Board-Level Clinical AI Governance Policy Actually Includes</h2>
 
-    .post-header h1 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.25rem;
-    }
+<p>A board-level clinical AI governance policy is not a technical document. It does not specify algorithms or training data. It establishes the institutional framework within which clinical AI is used — and it is the board's job to ensure that framework exists, not to write it.</p>
 
-    .post-meta {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      color: var(--gray);
-      font-size: 0.88rem;
-      font-weight: 400;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+<p>At minimum, that framework should address four things. First, a clear statement of what AI systems are in clinical use and what decisions they are designed to influence. Not the marketing description — the operational description. Where in the clinical workflow does this system generate an output, and how is that output used?</p>
 
-    .post-meta span { display: flex; align-items: center; gap: 0.4rem; }
+<p>Second, a physician training and documentation requirement. Physicians using AI diagnostic support tools should understand what the tool does, how to interpret its outputs, and what documentation is required when they disagree with an AI recommendation. This is not optional or informal — it is a credentialing and quality standard the board should require.</p>
 
-    .post-body {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 3rem 2rem 5rem;
-    }
+<p>Third, defined monitoring metrics that reach the board. Not every metric — but the three that matter most for governance accountability.</p>
 
-    .post-body p {
-      font-size: 1.1rem;
-      line-height: 1.85;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 1.75rem;
-    }
+<h2>Three Failure Categories Boards Should Require Monitoring For</h2>
 
-    .post-body p strong {
-      color: var(--white);
-      font-weight: 600;
-    }
+<ol>
+  <li><strong>False positive and false negative rates by patient demographic.</strong> An AI system may perform well on average while performing systematically worse for specific patient populations — by age, race, sex, or comorbidity profile. Aggregate performance metrics hide this. Boards should require that monitoring data be disaggregated by the demographic categories most relevant to the patient population served.</li>
+  <li><strong>Physician override rates and subsequent outcome tracking.</strong> If physicians are overriding AI recommendations at high rates in certain clinical contexts, that is a signal worth understanding — either the AI is poorly calibrated for that context, or physicians are not adequately trained to interpret its outputs. If override rates are very low, that may signal automation bias — physicians deferring to AI judgment in situations where their clinical expertise should dominate. Neither extreme is automatically correct, but both warrant attention.</li>
+  <li><strong>Outcomes comparison for AI-influenced versus non-AI-influenced decisions.</strong> Over time, hospitals should be tracking whether patients whose diagnoses involved AI support are experiencing better, worse, or equivalent outcomes compared to similar patients whose diagnoses did not. This is not easy to do rigorously, but it is the only way to evaluate whether AI is actually improving clinical performance — not just the appearance of it.</li>
+</ol>
 
-    .post-body h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin: 2.5rem 0 1rem;
-      color: var(--white);
-    }
+<h2>Informed Consent in the Age of AI Diagnostics</h2>
 
-    .post-body ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1.75rem;
-    }
+<p>One question hospital boards have largely avoided is whether patients have a right to know when AI is influencing their clinical care. The answer, legally and ethically, is increasingly yes — and the governance implications are significant.</p>
 
-    .post-body ol li {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 0.75rem;
-    }
+<p>Several state legislatures have introduced or passed informed consent requirements for AI-assisted clinical decisions. The Joint Commission has begun incorporating AI governance into accreditation standards. Patient advocacy organizations are developing model disclosure frameworks. The legal landscape is moving.</p>
 
-    .post-body .callout {
-      border-left: 3px solid var(--blue);
-      padding: 1.25rem 1.5rem;
-      margin: 2rem 0;
-      background: rgba(0,102,255,0.07);
-    }
+<p>Hospital boards that wait for regulatory clarity before establishing AI disclosure policies will find themselves implementing policies under pressure, after an adverse event, rather than building a principled framework proactively. The governance question is not whether patients should be informed — it is what they should be informed of, in what clinical contexts, and in what language. Those are institutional decisions that belong at the board level, not decisions that should be left to individual physicians to make inconsistently across thousands of patient encounters.</p>
 
-    .post-body .callout p {
-      margin-bottom: 0;
-      color: var(--light-blue);
-      font-size: 1.05rem;
-    }
-
-    .back-link {
-      display: inline-block;
-      color: var(--blue);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-    .back-link:hover { border-bottom-color: var(--blue); }
-
-    .subscribe-strip {
-      background: var(--blue);
-      padding: 3.5rem 2rem;
-      text-align: center;
-    }
-
-    .subscribe-strip h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-
-    .subscribe-form {
-      display: flex;
-      gap: 0;
-      max-width: 460px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
-
-    .subscribe-form input[type="email"] {
-      flex: 1;
-      min-width: 220px;
-      padding: 0.85rem 1.2rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
-      border: 2px solid var(--white);
-      background: rgba(255,255,255,0.12);
-      color: var(--white);
-      outline: none;
-    }
-
-    .subscribe-form input[type="email"]::placeholder { color: rgba(255,255,255,0.65); }
-
-    .subscribe-form button {
-      padding: 0.85rem 1.6rem;
-      background: var(--dark-blue);
-      color: var(--white);
-      border: 2px solid var(--dark-blue);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .subscribe-form button:hover {
-      background: var(--dark);
-      border-color: var(--dark);
-    }
-
-    footer {
-      background: var(--dark);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 2.5rem 2rem;
-      text-align: center;
-    }
-
-    footer p {
-      color: var(--gray);
-      font-size: 0.88rem;
-      line-height: 1.8;
-    }
-
-    @media (max-width: 768px) {
-      nav { padding: 0 1.2rem; }
-      .nav-links { gap: 1.2rem; }
-      .nav-links a { font-size: 0.85rem; }
-      .post-header, .post-body { padding-left: 1.2rem; padding-right: 1.2rem; }
-      .post-header { padding-top: 3rem; }
-      .subscribe-strip { padding: 2.5rem 1.2rem; }
-      .subscribe-form { gap: 0.5rem; }
-      .subscribe-form input[type="email"], .subscribe-form button { width: 100%; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <a class="nav-logo" href="/">Govern the Future</a>
-    <ul class="nav-links">
-      <li><a href="/governance.html">Governance</a></li>
-      <li><a href="/technology.html">Technology</a></li>
-      <li><a href="/analysis.html">Analysis</a></li>
-      <li><a href="/#about">About</a></li>
-      <li><a class="nav-subscribe" href="/#subscribe">Subscribe</a></li>
-    </ul>
-  </nav>
-
-  <!-- POST HEADER -->
-  <header class="post-header">
-    <a class="back-link" href="/">← All Posts</a>
-    <span class="tag">Healthcare Governance</span>
-    <h1>Hospital Boards and AI Diagnostics: When the Algorithm Is More Accurate Than the Doctor, Who Decides?</h1>
-    <div class="post-meta">
-      <span>May 19, 2026</span>
-      <span>·</span>
-      <span>6 min read</span>
-    </div>
-  </header>
-
-  <!-- POST BODY -->
-  <article class="post-body">
-    <p>Radiology AI systems are now outperforming human radiologists on certain detection tasks. Hospital boards that haven't addressed this governance question are about to face it in a patient harm lawsuit.</p>
-
-    <p>The performance data is no longer speculative. FDA-cleared AI systems for chest X-ray interpretation, mammography screening, and diabetic retinopathy detection have demonstrated sensitivity and specificity rates that match or exceed experienced specialists in controlled study conditions. The question of whether AI can do this is settled. The governance questions — who decides when to use it, what happens when the AI and the physician disagree, and what the hospital's board is accountable for when it goes wrong — are nowhere near settled.</p>
-
-    <p>Most hospital boards have not had the conversation. They approved the capital expenditure for an AI diagnostic system, delegated implementation to the clinical and IT leadership teams, and moved on to the next item on the agenda. That is not governance. That is procurement. And when the first significant patient harm event involving an AI diagnostic system reaches litigation, the distinction will matter enormously.</p>
-
-    <h2>The Governance Gap No One Is Talking About</h2>
-
-    <p>Here is the scenario that is coming to hospital boards everywhere, whether they have prepared for it or not:</p>
-
-    <p>An AI system flags an image as high-risk. The radiologist reviews the image, disagrees with the AI's assessment, and documents her clinical judgment overriding the system's recommendation. The patient is discharged without further workup. Three months later, the patient is diagnosed with a condition the AI had identified. The patient sues.</p>
-
-    <p>In the ensuing litigation, the questions will not be limited to whether the radiologist's clinical judgment was reasonable. They will include: What was the hospital's policy on AI override documentation? What training did physicians receive on how to interpret and weigh AI recommendations? What monitoring did the hospital conduct on its physicians' override rates and subsequent patient outcomes? What did the board know about the AI system's performance in this clinical context, and when did they know it?</p>
-
-    <p>If the board cannot answer those questions — if there is no policy, no training requirement, no monitoring program, and no board-level awareness of the system's performance — the institution's legal exposure extends well beyond the individual clinical decision. The board's failure to establish clinical AI governance becomes part of the liability narrative.</p>
-
-    <div class="callout">
-      <p>Clinical AI governance is not IT governance. Approving a vendor contract and delegating implementation is procurement. Establishing the policy framework within which AI influences clinical decisions — and monitoring whether that framework is working — is governance. Hospital boards are accountable for the latter whether or not they have done it.</p>
-    </div>
-
-    <h2>What a Board-Level Clinical AI Governance Policy Actually Includes</h2>
-
-    <p>A board-level clinical AI governance policy is not a technical document. It does not specify algorithms or training data. It establishes the institutional framework within which clinical AI is used — and it is the board's job to ensure that framework exists, not to write it.</p>
-
-    <p>At minimum, that framework should address four things. First, a clear statement of what AI systems are in clinical use and what decisions they are designed to influence. Not the marketing description — the operational description. Where in the clinical workflow does this system generate an output, and how is that output used?</p>
-
-    <p>Second, a physician training and documentation requirement. Physicians using AI diagnostic support tools should understand what the tool does, how to interpret its outputs, and what documentation is required when they disagree with an AI recommendation. This is not optional or informal — it is a credentialing and quality standard the board should require.</p>
-
-    <p>Third, defined monitoring metrics that reach the board. Not every metric — but the three that matter most for governance accountability.</p>
-
-    <h2>Three Failure Categories Boards Should Require Monitoring For</h2>
-
-    <ol>
-      <li><strong>False positive and false negative rates by patient demographic.</strong> An AI system may perform well on average while performing systematically worse for specific patient populations — by age, race, sex, or comorbidity profile. Aggregate performance metrics hide this. Boards should require that monitoring data be disaggregated by the demographic categories most relevant to the patient population served.</li>
-      <li><strong>Physician override rates and subsequent outcome tracking.</strong> If physicians are overriding AI recommendations at high rates in certain clinical contexts, that is a signal worth understanding — either the AI is poorly calibrated for that context, or physicians are not adequately trained to interpret its outputs. If override rates are very low, that may signal automation bias — physicians deferring to AI judgment in situations where their clinical expertise should dominate. Neither extreme is automatically correct, but both warrant attention.</li>
-      <li><strong>Outcomes comparison for AI-influenced versus non-AI-influenced decisions.</strong> Over time, hospitals should be tracking whether patients whose diagnoses involved AI support are experiencing better, worse, or equivalent outcomes compared to similar patients whose diagnoses did not. This is not easy to do rigorously, but it is the only way to evaluate whether AI is actually improving clinical performance — not just the appearance of it.</li>
-    </ol>
-
-    <h2>Informed Consent in the Age of AI Diagnostics</h2>
-
-    <p>One question hospital boards have largely avoided is whether patients have a right to know when AI is influencing their clinical care. The answer, legally and ethically, is increasingly yes — and the governance implications are significant.</p>
-
-    <p>Several state legislatures have introduced or passed informed consent requirements for AI-assisted clinical decisions. The Joint Commission has begun incorporating AI governance into accreditation standards. Patient advocacy organizations are developing model disclosure frameworks. The legal landscape is moving.</p>
-
-    <p>Hospital boards that wait for regulatory clarity before establishing AI disclosure policies will find themselves implementing policies under pressure, after an adverse event, rather than building a principled framework proactively. The governance question is not whether patients should be informed — it is what they should be informed of, in what clinical contexts, and in what language. Those are institutional decisions that belong at the board level, not decisions that should be left to individual physicians to make inconsistently across thousands of patient encounters.</p>
-
-    <p>The boards that treat clinical AI governance as a clinical quality question — governed by the same rigor applied to surgical protocols, infection control, and medication safety — will be better positioned to defend their institutions when things go wrong, and better positioned to ensure that AI adoption actually improves patient outcomes rather than just operational metrics. That is what hospital governance is for.</p>
-  </article>
-
-  <!-- SUBSCRIBE STRIP -->
-  <section class="subscribe-strip">
-    <h2>Don't miss a post.</h2>
-    <form class="subscribe-form" id="post-subscribe-form" action="https://formspree.io/f/xayzdydv" method="POST">
-      <input type="hidden" name="form" value="governthefuture-subscribe">
-      <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
-      <button type="submit">Subscribe</button>
-    </form>
-    <p id="post-subscribe-success" style="display:none;color:#fff;font-weight:600;margin-top:1rem;">&#x2713; You're in. New insights every Monday.</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Govern the Future | Weekly governance perspectives</p>
-    <p>&copy; 2026 Govern the Future</p>
-  </footer>
-
-  <script>
-    document.getElementById('post-subscribe-form').addEventListener('submit', async e => {
-      e.preventDefault();
-      const form = e.target;
-      const btn = form.querySelector('button');
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      const resp = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-      if (resp.ok) { form.style.display = 'none'; document.getElementById('post-subscribe-success').style.display = 'block'; }
-      else { btn.textContent = 'Try again'; btn.disabled = false; }
-    });
-  </script>
-</body>
-</html>
+<p>The boards that treat clinical AI governance as a clinical quality question — governed by the same rigor applied to surgical protocols, infection control, and medication safety — will be better positioned to defend their institutions when things go wrong, and better positioned to ensure that AI adoption actually improves patient outcomes rather than just operational metrics. That is what hospital governance is for.</p>

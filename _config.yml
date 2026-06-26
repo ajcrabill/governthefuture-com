@@ -1,0 +1,6 @@
+title: "Govern the Future"
+description: "Weekly governance insights at the intersection of governance and technology"
+url: "https://governthefuture.com"
+exclude:
+  - README.md
+  - "*.md"

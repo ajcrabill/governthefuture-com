@@ -1,377 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Every Board Now Has a Fiduciary Duty to Understand AI — Govern the Future</title>
-  <meta name="description" content="Whether you govern a hospital, a university, a startup, or a Fortune 500, the same question is landing in every board packet: do we actually understand what we're deploying — and who bears the accountability when it goes wrong?" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+---
+layout: post
+title: "Every Board Now Has a Fiduciary Duty to Understand AI"
+category: "AI & Boards"
+date: "2026-06-16"
+description: "Whether you govern a hospital, a university, a startup, or a Fortune 500, the same question is landing in every board packet."
+---
 
-    :root {
-      --blue:       #0066FF;
-      --dark:       #0A0A0F;
-      --white:      #FFFFFF;
-      --dark-blue:  #003399;
-      --light-blue: #E8F0FF;
-      --gray:       #6B7280;
-    }
+<p>Whether you govern a hospital, a university, a startup, or a Fortune 500, the same question is landing in every board packet: do we actually understand what we're deploying — and who bears the accountability when it goes wrong?</p>
 
-    html { scroll-behavior: smooth; }
+<p>For most boards, the honest answer to the first question is no. And the answer to the second is legally murky but trending toward: you do.</p>
 
-    body {
-      font-family: 'Space Grotesk', sans-serif;
-      background: var(--dark);
-      color: var(--white);
-      line-height: 1.6;
-    }
+<p>This is not a technology question. It is a governance question. And it has a clear answer rooted in the same legal framework boards have operated under for decades: fiduciary duty.</p>
 
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--dark);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
+<h2>What Fiduciary Duty Actually Requires</h2>
 
-    .nav-logo {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--blue);
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+<p>The two foundational duties of any board member are loyalty and care. The duty of loyalty requires board members to act in the interest of the organization they serve, not their own interests. The duty of care requires board members to make decisions with the diligence of a reasonably prudent person in a similar position.</p>
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+<p>Notice what the care standard does not say. It does not require expertise. It requires reasonable understanding — the kind of understanding that allows a board member to ask meaningful questions, evaluate management's recommendations, and recognize when something warrants further scrutiny.</p>
 
-    .nav-links a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
-    }
+<p>For decades, that standard was applied to financial statements, legal compliance, and strategic risk. Boards hired audit committees, retained outside counsel, and built financial literacy expectations for directors. The standard evolved alongside what organizations actually did.</p>
 
-    .nav-links a:hover {
-      color: var(--blue);
-      border-bottom-color: var(--blue);
-    }
+<p>What organizations actually do now includes deploying AI systems that influence hiring decisions, clinical diagnoses, student evaluations, and loan approvals. The care standard has not changed. The domain to which it applies has.</p>
 
-    /* ── POST HEADER ── */
-    .post-header {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 5rem 2rem 3rem;
-    }
+<p>A board member who cannot articulate what AI systems their organization deploys, what decisions those systems influence, and what oversight mechanisms exist is not meeting the duty of care — regardless of whether they have a computer science degree.</p>
 
-    .tag {
-      display: inline-block;
-      background: var(--blue);
-      color: var(--white);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.75rem;
-      margin-bottom: 1.5rem;
-    }
+<h2>Three Governance Failures That Are Already Happening</h2>
 
-    .post-header h1 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.25rem;
-    }
+<p>These are not hypotheticals. They are the pattern of how AI governance failures actually unfold at the board level.</p>
 
-    .post-meta {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      color: var(--gray);
-      font-size: 0.88rem;
-      font-weight: 400;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+<p><strong>A regional hospital system adopted an AI diagnostic support tool for emergency triage.</strong> The board approved the capital expenditure as a line item in an IT modernization budget. No board member asked how the system made its recommendations, what its error rates were across patient demographics, or what physician override protocols existed. Eighteen months later, an internal audit found the system was systematically undertriaging patients from lower-income zip codes. The board had no framework for knowing this was possible, let alone monitoring for it.</p>
 
-    .post-meta span { display: flex; align-items: center; gap: 0.4rem; }
+<p><strong>A mid-sized university approved an AI-assisted grading platform</strong> for large introductory courses. The provost presented it as an efficiency gain — more consistent feedback, faster turnaround. The board approved. Two semesters later, a group of students filed a complaint with the accreditor alleging the system penalized non-native English speakers. When the accreditor asked the board what oversight mechanisms existed for the system's ongoing use, the board could not answer. There were none.</p>
 
-    /* ── POST BODY ── */
-    .post-body {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 3rem 2rem 5rem;
-    }
+<p><strong>A regional nonprofit deployed an AI-powered donor outreach system</strong> that used predictive modeling to identify high-value prospects and personalize fundraising appeals. Donations increased 23%. Then a journalist filed a public records request and discovered the system had used demographic proxies that effectively excluded donors of color from certain campaign categories. The board had approved the vendor contract. No board member had asked what data the model used or whether it had been audited for equity implications.</p>
 
-    .post-body p {
-      font-size: 1.1rem;
-      line-height: 1.85;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 1.75rem;
-    }
+<p>In each case, the board was not malicious. It was inattentive — in exactly the way that a fiduciary standard prohibits.</p>
 
-    .post-body p strong {
-      color: var(--white);
-      font-weight: 600;
-    }
+<div class="callout">
+  <p>The care standard does not require boards to become AI experts. It requires them to ask the questions a reasonably prudent person would ask before authorizing a system that materially affects the people the organization exists to serve.</p>
+</div>
 
-    .post-body h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin: 2.5rem 0 1rem;
-      color: var(--white);
-    }
+<h2>The Practical Minimum</h2>
 
-    .post-body ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1.75rem;
-    }
+<p>What does the care standard actually require in the AI context? Less than boards fear, but more than most are doing.</p>
 
-    .post-body ol li {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 0.75rem;
-    }
+<p>At minimum, a board should be able to answer three questions about any significant AI system its organization deploys:</p>
 
-    .post-body .callout {
-      border-left: 3px solid var(--blue);
-      padding: 1.25rem 1.5rem;
-      margin: 2rem 0;
-      background: rgba(0,102,255,0.07);
-    }
+<ol>
+  <li><strong>What does this system do, and what decisions does it influence?</strong> Not at a marketing-brochure level — at a process level. Who in the organization acts differently because this system exists?</li>
+  <li><strong>How is the system monitored for accuracy and equity?</strong> Not whether it works on average, but whether it works equitably across the populations it affects. Who reviews that data, how often, and what triggers a board-level conversation?</li>
+  <li><strong>What is the escalation path if something goes wrong?</strong> Who has authority to pause or shut down a system? Under what conditions? How would the board know if those conditions had been met?</li>
+</ol>
 
-    .post-body .callout p {
-      margin-bottom: 0;
-      color: var(--light-blue);
-      font-size: 1.05rem;
-    }
+<p>A board that can answer these questions for every material AI deployment is not just meeting its fiduciary duty — it is genuinely governing. A board that cannot is operating on faith, which is not a fiduciary posture.</p>
 
-    /* ── BACK LINK ── */
-    .back-link {
-      display: inline-block;
-      color: var(--blue);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-    .back-link:hover { border-bottom-color: var(--blue); }
+<h2>What Good Looks Like</h2>
 
-    /* ── SUBSCRIBE STRIP ── */
-    .subscribe-strip {
-      background: var(--blue);
-      padding: 3.5rem 2rem;
-      text-align: center;
-    }
+<p>The boards getting this right share a few characteristics. They have designated an AI governance committee or assigned AI oversight to an existing committee with a clear mandate. They receive a periodic AI systems inventory — not a vendor demo, but a management report on what is deployed, what it influences, and what the monitoring results show. They have established thresholds: what level of AI adoption requires board approval versus CEO delegation.</p>
 
-    .subscribe-strip h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
+<p>They have also invested in board education — not to make directors into technologists, but to give them enough fluency to ask the right questions. A half-day session with an outside expert once a year is not sufficient. Ongoing learning, integrated into how the board does its work, is what actually builds the capability the care standard now requires.</p>
 
-    .subscribe-form {
-      display: flex;
-      gap: 0;
-      max-width: 460px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
-
-    .subscribe-form input[type="email"] {
-      flex: 1;
-      min-width: 220px;
-      padding: 0.85rem 1.2rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
-      border: 2px solid var(--white);
-      background: rgba(255,255,255,0.12);
-      color: var(--white);
-      outline: none;
-    }
-
-    .subscribe-form input[type="email"]::placeholder { color: rgba(255,255,255,0.65); }
-
-    .subscribe-form button {
-      padding: 0.85rem 1.6rem;
-      background: var(--dark-blue);
-      color: var(--white);
-      border: 2px solid var(--dark-blue);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .subscribe-form button:hover {
-      background: var(--dark);
-      border-color: var(--dark);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--dark);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 2.5rem 2rem;
-      text-align: center;
-    }
-
-    footer p {
-      color: var(--gray);
-      font-size: 0.88rem;
-      line-height: 1.8;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      nav { padding: 0 1.2rem; }
-      .nav-links { gap: 1.2rem; }
-      .nav-links a { font-size: 0.85rem; }
-      .post-header, .post-body { padding-left: 1.2rem; padding-right: 1.2rem; }
-      .post-header { padding-top: 3rem; }
-      .subscribe-strip { padding: 2.5rem 1.2rem; }
-      .subscribe-form { gap: 0.5rem; }
-      .subscribe-form input[type="email"], .subscribe-form button { width: 100%; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <a class="nav-logo" href="/">Govern the Future</a>
-    <ul class="nav-links">
-      <li><a href="/governance.html">Governance</a></li>
-      <li><a href="/technology.html">Technology</a></li>
-      <li><a href="/analysis.html">Analysis</a></li>
-      <li><a href="/#about">About</a></li>
-      <li><a class="nav-subscribe" href="/#subscribe">Subscribe</a></li>
-    </ul>
-  </nav>
-
-  <!-- POST HEADER -->
-  <header class="post-header">
-    <a class="back-link" href="/">← All Posts</a>
-    <span class="tag">AI &amp; Boards</span>
-    <h1>Every Board Now Has a Fiduciary Duty to Understand AI</h1>
-    <div class="post-meta">
-      <span>June 16, 2026</span>
-      <span>·</span>
-      <span>5 min read</span>
-    </div>
-  </header>
-
-  <!-- POST BODY -->
-  <article class="post-body">
-    <p>Whether you govern a hospital, a university, a startup, or a Fortune 500, the same question is landing in every board packet: do we actually understand what we're deploying — and who bears the accountability when it goes wrong?</p>
-
-    <p>For most boards, the honest answer to the first question is no. And the answer to the second is legally murky but trending toward: you do.</p>
-
-    <p>This is not a technology question. It is a governance question. And it has a clear answer rooted in the same legal framework boards have operated under for decades: fiduciary duty.</p>
-
-    <h2>What Fiduciary Duty Actually Requires</h2>
-
-    <p>The two foundational duties of any board member are loyalty and care. The duty of loyalty requires board members to act in the interest of the organization they serve, not their own interests. The duty of care requires board members to make decisions with the diligence of a reasonably prudent person in a similar position.</p>
-
-    <p>Notice what the care standard does not say. It does not require expertise. It requires reasonable understanding — the kind of understanding that allows a board member to ask meaningful questions, evaluate management's recommendations, and recognize when something warrants further scrutiny.</p>
-
-    <p>For decades, that standard was applied to financial statements, legal compliance, and strategic risk. Boards hired audit committees, retained outside counsel, and built financial literacy expectations for directors. The standard evolved alongside what organizations actually did.</p>
-
-    <p>What organizations actually do now includes deploying AI systems that influence hiring decisions, clinical diagnoses, student evaluations, and loan approvals. The care standard has not changed. The domain to which it applies has.</p>
-
-    <p>A board member who cannot articulate what AI systems their organization deploys, what decisions those systems influence, and what oversight mechanisms exist is not meeting the duty of care — regardless of whether they have a computer science degree.</p>
-
-    <h2>Three Governance Failures That Are Already Happening</h2>
-
-    <p>These are not hypotheticals. They are the pattern of how AI governance failures actually unfold at the board level.</p>
-
-    <p><strong>A regional hospital system adopted an AI diagnostic support tool for emergency triage.</strong> The board approved the capital expenditure as a line item in an IT modernization budget. No board member asked how the system made its recommendations, what its error rates were across patient demographics, or what physician override protocols existed. Eighteen months later, an internal audit found the system was systematically undertriaging patients from lower-income zip codes. The board had no framework for knowing this was possible, let alone monitoring for it.</p>
-
-    <p><strong>A mid-sized university approved an AI-assisted grading platform</strong> for large introductory courses. The provost presented it as an efficiency gain — more consistent feedback, faster turnaround. The board approved. Two semesters later, a group of students filed a complaint with the accreditor alleging the system penalized non-native English speakers. When the accreditor asked the board what oversight mechanisms existed for the system's ongoing use, the board could not answer. There were none.</p>
-
-    <p><strong>A regional nonprofit deployed an AI-powered donor outreach system</strong> that used predictive modeling to identify high-value prospects and personalize fundraising appeals. Donations increased 23%. Then a journalist filed a public records request and discovered the system had used demographic proxies that effectively excluded donors of color from certain campaign categories. The board had approved the vendor contract. No board member had asked what data the model used or whether it had been audited for equity implications.</p>
-
-    <p>In each case, the board was not malicious. It was inattentive — in exactly the way that a fiduciary standard prohibits.</p>
-
-    <div class="callout">
-      <p>The care standard does not require boards to become AI experts. It requires them to ask the questions a reasonably prudent person would ask before authorizing a system that materially affects the people the organization exists to serve.</p>
-    </div>
-
-    <h2>The Practical Minimum</h2>
-
-    <p>What does the care standard actually require in the AI context? Less than boards fear, but more than most are doing.</p>
-
-    <p>At minimum, a board should be able to answer three questions about any significant AI system its organization deploys:</p>
-
-    <ol>
-      <li><strong>What does this system do, and what decisions does it influence?</strong> Not at a marketing-brochure level — at a process level. Who in the organization acts differently because this system exists?</li>
-      <li><strong>How is the system monitored for accuracy and equity?</strong> Not whether it works on average, but whether it works equitably across the populations it affects. Who reviews that data, how often, and what triggers a board-level conversation?</li>
-      <li><strong>What is the escalation path if something goes wrong?</strong> Who has authority to pause or shut down a system? Under what conditions? How would the board know if those conditions had been met?</li>
-    </ol>
-
-    <p>A board that can answer these questions for every material AI deployment is not just meeting its fiduciary duty — it is genuinely governing. A board that cannot is operating on faith, which is not a fiduciary posture.</p>
-
-    <h2>What Good Looks Like</h2>
-
-    <p>The boards getting this right share a few characteristics. They have designated an AI governance committee or assigned AI oversight to an existing committee with a clear mandate. They receive a periodic AI systems inventory — not a vendor demo, but a management report on what is deployed, what it influences, and what the monitoring results show. They have established thresholds: what level of AI adoption requires board approval versus CEO delegation.</p>
-
-    <p>They have also invested in board education — not to make directors into technologists, but to give them enough fluency to ask the right questions. A half-day session with an outside expert once a year is not sufficient. Ongoing learning, integrated into how the board does its work, is what actually builds the capability the care standard now requires.</p>
-
-    <p>The organizations that will face governance failures in the next three years are not primarily those deploying AI recklessly. They are those deploying AI earnestly but without the oversight infrastructure to know when something is going wrong. The board's job is to ensure that infrastructure exists. That has always been the job. AI has just made the stakes of not doing it considerably higher.</p>
-  </article>
-
-  <!-- SUBSCRIBE STRIP -->
-  <section class="subscribe-strip">
-    <h2>Don't miss a post.</h2>
-    <form class="subscribe-form" id="post-subscribe-form" action="https://formspree.io/f/xayzdydv" method="POST">
-      <input type="hidden" name="form" value="governthefuture-subscribe">
-      <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
-      <button type="submit">Subscribe</button>
-    </form>
-    <p id="post-subscribe-success" style="display:none;color:#fff;font-weight:600;margin-top:1rem;">&#x2713; You're in. New insights every Monday.</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Govern the Future | Weekly governance perspectives</p>
-    <p>&copy; 2026 Govern the Future</p>
-  </footer>
-
-  <script>
-    document.getElementById('post-subscribe-form').addEventListener('submit', async e => {
-      e.preventDefault();
-      const form = e.target;
-      const btn = form.querySelector('button');
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      const resp = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-      if (resp.ok) { form.style.display = 'none'; document.getElementById('post-subscribe-success').style.display = 'block'; }
-      else { btn.textContent = 'Try again'; btn.disabled = false; }
-    });
-  </script>
-</body>
-</html>
+<p>The organizations that will face governance failures in the next three years are not primarily those deploying AI recklessly. They are those deploying AI earnestly but without the oversight infrastructure to know when something is going wrong. The board's job is to ensure that infrastructure exists. That has always been the job. AI has just made the stakes of not doing it considerably higher.</p>

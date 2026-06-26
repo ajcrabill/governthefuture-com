@@ -1,360 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Board That Said Yes to Every AI Pitch — and the One That Said No to All of Them — Govern the Future</title>
-  <meta name="description" content="Across two adjacent industries, two boards made opposite calls on AI adoption in 2024. Two years later, the governance implications of both choices are becoming clear — and neither board got it entirely right." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+---
+layout: post
+title: "The Board That Said Yes to Every AI Pitch — and the One That Said No to All of Them"
+category: "Corporate Governance"
+date: "2026-06-09"
+description: "Across two adjacent industries, two boards made opposite calls on AI adoption in 2024."
+---
 
-    :root {
-      --blue:       #0066FF;
-      --dark:       #0A0A0F;
-      --white:      #FFFFFF;
-      --dark-blue:  #003399;
-      --light-blue: #E8F0FF;
-      --gray:       #6B7280;
-    }
+<p>Across two adjacent industries, two boards made opposite calls on AI adoption in 2024. Two years later, the governance implications of both choices are becoming clear — and neither board got it entirely right.</p>
 
-    html { scroll-behavior: smooth; }
+<p>The pattern is more common than most governance professionals want to admit. Boards tend to be binary about novel risk: either they embrace it wholesale because the opportunity narrative is compelling, or they defer it indefinitely because the risk narrative is alarming. AI has exposed this pattern with unusual clarity, because the opportunity and risk narratives are both credible — and both incomplete without a governance framework to mediate between them.</p>
 
-    body {
-      font-family: 'Space Grotesk', sans-serif;
-      background: var(--dark);
-      color: var(--white);
-      line-height: 1.6;
-    }
+<h2>The Board That Said Yes to Everything</h2>
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--dark);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
+<p>A regional healthcare system in the mid-Atlantic entered 2024 with a board that was, by most measures, sophisticated. Experienced executives. Engaged audit committee. Strong financial performance. And a genuine conviction — shared by management and the board alike — that AI represented the most significant efficiency opportunity the organization had seen in a generation.</p>
 
-    .nav-logo {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--blue);
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+<p>So when AI vendors came calling, the board cleared the path. Revenue cycle management AI — approved. Clinical documentation AI — approved. Predictive staffing AI — approved. Supply chain optimization AI — approved. Each approval came with a vendor ROI projection, a management endorsement, and a line item in the capital budget. Each approval also came without a governance framework: no standard for what AI deployment decisions required board versus CEO approval, no consistent monitoring requirement, no audit mechanism, no defined accountability when something went wrong.</p>
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+<p>The reckoning came in early 2026. A billing optimization AI system — one of the first approved — had been silently miscategorizing a subset of procedures for 14 months. By the time the error was caught through a routine external audit, approximately 3,000 patients had received incorrect billing statements, some of which had been sent to collections. The financial exposure was significant. But the governance exposure was worse.</p>
 
-    .nav-links a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
-    }
+<p>When the board convened an emergency session, no member could answer basic questions: Who had responsibility for monitoring this system's outputs? What was the audit trail showing? Had any alerts been triggered? Who had authority to pause the system pending investigation? The answer to all four questions was, effectively, nobody had established that. The system had been deployed; governance of it had not.</p>
 
-    .nav-links a:hover {
-      color: var(--blue);
-      border-bottom-color: var(--blue);
-    }
+<h2>The Board That Said No to Everything</h2>
 
-    .post-header {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 5rem 2rem 3rem;
-    }
+<p>Fifty miles away, a large healthcare nonprofit serving a similar patient population took the opposite stance. After reviewing headlines about AI errors in clinical settings, their board chair convened a special committee in mid-2024 to develop a comprehensive AI governance policy before authorizing any AI adoption. The committee was thorough. They engaged outside counsel, consulted with peer institutions, and reviewed emerging regulatory guidance.</p>
 
-    .tag {
-      display: inline-block;
-      background: var(--blue);
-      color: var(--white);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.75rem;
-      margin-bottom: 1.5rem;
-    }
+<p>They also took eighteen months to finish the work — and the policy still was not final when the for-profit system across town had already deployed, failed, and begun remediation.</p>
 
-    .post-header h1 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.25rem;
-    }
+<p>The nonprofit's AI policy committee is still meeting. Their competitors have deployed, iterated, and built institutional knowledge. The nonprofit's clinical staff have begun using personal AI tools — unsanctioned, unmonitored, and ungoverned — because the official path to adoption remains closed. The board that wanted to protect its organization from AI risk created a different, less visible risk: shadow adoption with no governance at all.</p>
 
-    .post-meta {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      color: var(--gray);
-      font-size: 0.88rem;
-      font-weight: 400;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+<div class="callout">
+  <p>Reflexive yes creates accountability diffusion. Reflexive no creates accountability vacuum. Neither posture serves the people the organization exists to serve — and neither constitutes a governance framework.</p>
+</div>
 
-    .post-meta span { display: flex; align-items: center; gap: 0.4rem; }
+<h2>What Neither Board Did</h2>
 
-    .post-body {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 3rem 2rem 5rem;
-    }
+<p>Both boards failed the same governance test, from opposite directions. Neither had a framework for evaluating AI adoption decisions systematically. One approved everything that came to a vote; the other blocked everything until a policy arrived that never did. Neither had answered the foundational governance questions that would have made either path workable.</p>
 
-    .post-body p {
-      font-size: 1.1rem;
-      line-height: 1.85;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 1.75rem;
-    }
+<p>Those questions are not complicated, but they require deliberate board action to answer:</p>
 
-    .post-body p strong {
-      color: var(--white);
-      font-weight: 600;
-    }
+<ol>
+  <li><strong>What categories of AI adoption decisions require board approval versus CEO delegation?</strong> A payroll processing AI is different from a clinical decision support AI. A content generation tool is different from a hiring screening tool. Boards need a tiering framework — not a case-by-case scramble for every vendor pitch.</li>
+  <li><strong>What monitoring requirements apply to any AI system in deployment?</strong> Who receives the monitoring report? At what frequency? What thresholds trigger escalation to the board?</li>
+  <li><strong>What is the pause-and-remediation protocol?</strong> Who has authority to suspend a system? Under what conditions? What does the board need to know, and when?</li>
+</ol>
 
-    .post-body h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin: 2.5rem 0 1rem;
-      color: var(--white);
-    }
+<h2>What Good Governance Looks Like</h2>
 
-    .post-body ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1.75rem;
-    }
+<p>The boards navigating this well are not the ones with the most sophisticated AI understanding. They are the ones that built a framework before the adoption decisions arrived — so that when a vendor pitch comes to the table, there is a process for evaluating it rather than a binary board mood.</p>
 
-    .post-body ol li {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 0.75rem;
-    }
+<p>That framework has three components. First, a delegation matrix: explicit thresholds for what the CEO can approve unilaterally, what requires audit committee review, and what requires a full board vote. Second, standard monitoring requirements attached to any approved AI deployment — not optional, not delegated entirely to management's discretion. Third, a clear escalation trigger: the specific conditions under which management must notify the board of a problem, not wait for the next scheduled report.</p>
 
-    .post-body .callout {
-      border-left: 3px solid var(--blue);
-      padding: 1.25rem 1.5rem;
-      margin: 2rem 0;
-      background: rgba(0,102,255,0.07);
-    }
-
-    .post-body .callout p {
-      margin-bottom: 0;
-      color: var(--light-blue);
-      font-size: 1.05rem;
-    }
-
-    .back-link {
-      display: inline-block;
-      color: var(--blue);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-    .back-link:hover { border-bottom-color: var(--blue); }
-
-    .subscribe-strip {
-      background: var(--blue);
-      padding: 3.5rem 2rem;
-      text-align: center;
-    }
-
-    .subscribe-strip h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-
-    .subscribe-form {
-      display: flex;
-      gap: 0;
-      max-width: 460px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
-
-    .subscribe-form input[type="email"] {
-      flex: 1;
-      min-width: 220px;
-      padding: 0.85rem 1.2rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
-      border: 2px solid var(--white);
-      background: rgba(255,255,255,0.12);
-      color: var(--white);
-      outline: none;
-    }
-
-    .subscribe-form input[type="email"]::placeholder { color: rgba(255,255,255,0.65); }
-
-    .subscribe-form button {
-      padding: 0.85rem 1.6rem;
-      background: var(--dark-blue);
-      color: var(--white);
-      border: 2px solid var(--dark-blue);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .subscribe-form button:hover {
-      background: var(--dark);
-      border-color: var(--dark);
-    }
-
-    footer {
-      background: var(--dark);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 2.5rem 2rem;
-      text-align: center;
-    }
-
-    footer p {
-      color: var(--gray);
-      font-size: 0.88rem;
-      line-height: 1.8;
-    }
-
-    @media (max-width: 768px) {
-      nav { padding: 0 1.2rem; }
-      .nav-links { gap: 1.2rem; }
-      .nav-links a { font-size: 0.85rem; }
-      .post-header, .post-body { padding-left: 1.2rem; padding-right: 1.2rem; }
-      .post-header { padding-top: 3rem; }
-      .subscribe-strip { padding: 2.5rem 1.2rem; }
-      .subscribe-form { gap: 0.5rem; }
-      .subscribe-form input[type="email"], .subscribe-form button { width: 100%; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <a class="nav-logo" href="/">Govern the Future</a>
-    <ul class="nav-links">
-      <li><a href="/governance.html">Governance</a></li>
-      <li><a href="/technology.html">Technology</a></li>
-      <li><a href="/analysis.html">Analysis</a></li>
-      <li><a href="/#about">About</a></li>
-      <li><a class="nav-subscribe" href="/#subscribe">Subscribe</a></li>
-    </ul>
-  </nav>
-
-  <!-- POST HEADER -->
-  <header class="post-header">
-    <a class="back-link" href="/">← All Posts</a>
-    <span class="tag">Corporate Governance</span>
-    <h1>The Board That Said Yes to Every AI Pitch — and the One That Said No to All of Them</h1>
-    <div class="post-meta">
-      <span>June 9, 2026</span>
-      <span>·</span>
-      <span>6 min read</span>
-    </div>
-  </header>
-
-  <!-- POST BODY -->
-  <article class="post-body">
-    <p>Across two adjacent industries, two boards made opposite calls on AI adoption in 2024. Two years later, the governance implications of both choices are becoming clear — and neither board got it entirely right.</p>
-
-    <p>The pattern is more common than most governance professionals want to admit. Boards tend to be binary about novel risk: either they embrace it wholesale because the opportunity narrative is compelling, or they defer it indefinitely because the risk narrative is alarming. AI has exposed this pattern with unusual clarity, because the opportunity and risk narratives are both credible — and both incomplete without a governance framework to mediate between them.</p>
-
-    <h2>The Board That Said Yes to Everything</h2>
-
-    <p>A regional healthcare system in the mid-Atlantic entered 2024 with a board that was, by most measures, sophisticated. Experienced executives. Engaged audit committee. Strong financial performance. And a genuine conviction — shared by management and the board alike — that AI represented the most significant efficiency opportunity the organization had seen in a generation.</p>
-
-    <p>So when AI vendors came calling, the board cleared the path. Revenue cycle management AI — approved. Clinical documentation AI — approved. Predictive staffing AI — approved. Supply chain optimization AI — approved. Each approval came with a vendor ROI projection, a management endorsement, and a line item in the capital budget. Each approval also came without a governance framework: no standard for what AI deployment decisions required board versus CEO approval, no consistent monitoring requirement, no audit mechanism, no defined accountability when something went wrong.</p>
-
-    <p>The reckoning came in early 2026. A billing optimization AI system — one of the first approved — had been silently miscategorizing a subset of procedures for 14 months. By the time the error was caught through a routine external audit, approximately 3,000 patients had received incorrect billing statements, some of which had been sent to collections. The financial exposure was significant. But the governance exposure was worse.</p>
-
-    <p>When the board convened an emergency session, no member could answer basic questions: Who had responsibility for monitoring this system's outputs? What was the audit trail showing? Had any alerts been triggered? Who had authority to pause the system pending investigation? The answer to all four questions was, effectively, nobody had established that. The system had been deployed; governance of it had not.</p>
-
-    <h2>The Board That Said No to Everything</h2>
-
-    <p>Fifty miles away, a large healthcare nonprofit serving a similar patient population took the opposite stance. After reviewing headlines about AI errors in clinical settings, their board chair convened a special committee in mid-2024 to develop a comprehensive AI governance policy before authorizing any AI adoption. The committee was thorough. They engaged outside counsel, consulted with peer institutions, and reviewed emerging regulatory guidance.</p>
-
-    <p>They also took eighteen months to finish the work — and the policy still was not final when the for-profit system across town had already deployed, failed, and begun remediation.</p>
-
-    <p>The nonprofit's AI policy committee is still meeting. Their competitors have deployed, iterated, and built institutional knowledge. The nonprofit's clinical staff have begun using personal AI tools — unsanctioned, unmonitored, and ungoverned — because the official path to adoption remains closed. The board that wanted to protect its organization from AI risk created a different, less visible risk: shadow adoption with no governance at all.</p>
-
-    <div class="callout">
-      <p>Reflexive yes creates accountability diffusion. Reflexive no creates accountability vacuum. Neither posture serves the people the organization exists to serve — and neither constitutes a governance framework.</p>
-    </div>
-
-    <h2>What Neither Board Did</h2>
-
-    <p>Both boards failed the same governance test, from opposite directions. Neither had a framework for evaluating AI adoption decisions systematically. One approved everything that came to a vote; the other blocked everything until a policy arrived that never did. Neither had answered the foundational governance questions that would have made either path workable.</p>
-
-    <p>Those questions are not complicated, but they require deliberate board action to answer:</p>
-
-    <ol>
-      <li><strong>What categories of AI adoption decisions require board approval versus CEO delegation?</strong> A payroll processing AI is different from a clinical decision support AI. A content generation tool is different from a hiring screening tool. Boards need a tiering framework — not a case-by-case scramble for every vendor pitch.</li>
-      <li><strong>What monitoring requirements apply to any AI system in deployment?</strong> Who receives the monitoring report? At what frequency? What thresholds trigger escalation to the board?</li>
-      <li><strong>What is the pause-and-remediation protocol?</strong> Who has authority to suspend a system? Under what conditions? What does the board need to know, and when?</li>
-    </ol>
-
-    <h2>What Good Governance Looks Like</h2>
-
-    <p>The boards navigating this well are not the ones with the most sophisticated AI understanding. They are the ones that built a framework before the adoption decisions arrived — so that when a vendor pitch comes to the table, there is a process for evaluating it rather than a binary board mood.</p>
-
-    <p>That framework has three components. First, a delegation matrix: explicit thresholds for what the CEO can approve unilaterally, what requires audit committee review, and what requires a full board vote. Second, standard monitoring requirements attached to any approved AI deployment — not optional, not delegated entirely to management's discretion. Third, a clear escalation trigger: the specific conditions under which management must notify the board of a problem, not wait for the next scheduled report.</p>
-
-    <p>Neither the yes-to-everything board nor the no-to-everything board had built that framework. The result, in both cases, was governance theater — the appearance of oversight without the substance of it. The beneficiaries of both organizations paid the price.</p>
-  </article>
-
-  <!-- SUBSCRIBE STRIP -->
-  <section class="subscribe-strip">
-    <h2>Don't miss a post.</h2>
-    <form class="subscribe-form" id="post-subscribe-form" action="https://formspree.io/f/xayzdydv" method="POST">
-      <input type="hidden" name="form" value="governthefuture-subscribe">
-      <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
-      <button type="submit">Subscribe</button>
-    </form>
-    <p id="post-subscribe-success" style="display:none;color:#fff;font-weight:600;margin-top:1rem;">&#x2713; You're in. New insights every Monday.</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Govern the Future | Weekly governance perspectives</p>
-    <p>&copy; 2026 Govern the Future</p>
-  </footer>
-
-  <script>
-    document.getElementById('post-subscribe-form').addEventListener('submit', async e => {
-      e.preventDefault();
-      const form = e.target;
-      const btn = form.querySelector('button');
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      const resp = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-      if (resp.ok) { form.style.display = 'none'; document.getElementById('post-subscribe-success').style.display = 'block'; }
-      else { btn.textContent = 'Try again'; btn.disabled = false; }
-    });
-  </script>
-</body>
-</html>
+<p>Neither the yes-to-everything board nor the no-to-everything board had built that framework. The result, in both cases, was governance theater — the appearance of oversight without the substance of it. The beneficiaries of both organizations paid the price.</p>
